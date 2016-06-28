@@ -492,10 +492,10 @@ hr {
 
 h1.arrow {
 	font-family: 'Ubuntu', cursive;
-	color: #01579B;
+	color: #fff;
     font-size: 4.9em;
     font-weight: 700;
-    letter-spacing: 1px;
+    letter-spacing: -4px;
     text-transform: uppercase;
     text-shadow: 1px 1px 2px #4B596F;
 
@@ -1210,7 +1210,7 @@ div.avatar7  {
 /** Registration Form **/
 /****************************/
 .swag {
-	background-color: #A5CC60;
+	background-color: #202020;
 }
 
 .swag h1 {
@@ -1281,7 +1281,7 @@ div.avatar7  {
 .nl-field-toggle, .nl-form input, .nl-form select {
 	line-height: inherit;
 	display: inline-block;
-	color: #0c59d8;
+	color: #ff6f0c;
 	cursor: pointer;
 	border-bottom: 1px dashed #fff;
 }
@@ -1316,7 +1316,7 @@ div.avatar7  {
     position: relative;
     text-transform: uppercase;
     width: 200px;
-    box-shadow: 2px 2px 4px #888888; 
+    box-shadow: 2px 2px 4px #000; 
 }
 
 .no-touch .nl-form .nl-submit:hover, .no-touch .nl-form .nl-submit:active {
@@ -2173,7 +2173,7 @@ ul.planContainer {
 }
 
 .contact-wrap {
-	background-color: #43A2D3;
+	background-color: #0277BD;
 	position: relative;
 }
 
@@ -2231,7 +2231,7 @@ footer a {
 }
 
 footer {
-	background-color: #1E1C1C;
+	background-color: #090101;
     padding: 25px 0;
 }
 
@@ -2355,4 +2355,9 @@ font-size: 14px;
 
 .elgranpedo{
 	display: none !important;
+}
+
+
+.negro{
+	background-color: #202020 !important;
 }
