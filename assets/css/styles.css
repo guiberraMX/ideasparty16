@@ -333,9 +333,9 @@ hr {
 
     font-family: 'Ubuntu', cursive;
 	font-size: 3.5em;
-    font-weight: 300;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0em;
+    
 	padding: 0 10%;
 }
 
@@ -369,6 +369,8 @@ hr {
 	clear: both;
 	text-align: center;
 	float: none;
+	vertical-align: middle !important;
+
 }
 
 /****************************/
@@ -2367,3 +2369,24 @@ font-size: 14px;
 .cta33{
 	margin-top: 240px !important;
 }
+
+
+.superboletos{
+	margin-right: 0px !important;
+	color: #fff !important;
+
+	padding: 10px !important;
+	margin-bottom: 60px !important;
+	background-color: #d84b22 !important;
+
+
+
+	
+}
+
+
+.osi{
+	color: #fff !important;
+	margin-right: 3em;
+}
+
