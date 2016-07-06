@@ -327,10 +327,10 @@ jQuery( document ).ready(function( $ ) {
 
 var trueMobile = isMobile.any()
 if (trueMobile){
-	    $('#background-video').css('display','none');
-		$('#background').css('display','none');
-		$('#tubular-container').css('display','none');
-		$('#tubular-shield').css('display','none');	
+	    $('#background-video').css();
+		$('#background').css();
+		$('#tubular-container').css();
+		$('#tubular-shield').css();	
 }
 
 
