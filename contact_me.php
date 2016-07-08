@@ -4,7 +4,7 @@
 if($_POST)
 {
 	$to_Email   	= "ideaspartymx@gmail.com"; //Replace with recipient email address
-	$subject        = 'Contacto de la página web'; //Subject line for emails
+	$subject        = 'Página web'; //Subject line for emails
 	
 	//check if its an ajax request, exit if not
     if(!isset($_SERVER['HTTP_X_REQUESTED_WITH']) AND strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) != 'xmlhttprequest') {
@@ -49,12 +49,11 @@ if($_POST)
 	
 	if(!$sentMail)
 	{
-		$output = json_encode(array('type'=>'error', 'text' => 'Ocurrió un error intenta de nuevo.'));
+		$output = json_encode(array('type'=>'error', 'text' => 'Could not send mail! Please check your PHP mail configuration.'));
 		die($output);
 	}else{
-		$output = json_encode(array('type'=>'message', 'text' => 'Pronto nos pondrémps en contacto contigo ;)'));
+		$output = json_encode(array('type'=>'message', 'text' => 'Your message has been sent'));
 		die($output);
 	}
 }
 ?>
-

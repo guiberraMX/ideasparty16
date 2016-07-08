@@ -298,7 +298,7 @@ jQuery( document ).ready(function( $ ) {
 /*Youtube background*/
 /**********************************/
 
-	var options = { videoId: 'kA4w4CehIOg',repeat: true }; /* you tube video id goes here.*/
+	var options = { videoId: 'cID7LuywYf0',repeat: true }; /* you tube video id goes here.*/
 	$('#background-video').tubular(options);
 	
 /***************************************/
@@ -327,10 +327,10 @@ jQuery( document ).ready(function( $ ) {
 
 var trueMobile = isMobile.any()
 if (trueMobile){
-	    $('#background-video').css();
-		$('#background').css();
-		$('#tubular-container').css();
-		$('#tubular-shield').css();	
+	    $('#background-video').css('display','none');
+		$('#background').css('display','none');
+		$('#tubular-container').css('display','none');
+		$('#tubular-shield').css('display','none');	
 }
 
 

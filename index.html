@@ -9,12 +9,12 @@
 		<link rel="icon" href="favicon.ico" type="image/x-icon">
 		
 		<!-- TITLE -->
-		<title>Ideas Party</title>
+		<title>Ideas Party</title> 
 		
 		<!-- DESCRIPTION -->
-		<meta name="author" content=" Thinkers in Motion " />
+		<meta name="author" content="Thinkers in Motion " />
 		<meta name="description" content="" />
-	
+		
 
 		<!-- GOOGLE FONTS -->
 		<link href='http://fonts.googleapis.com/css?family=Raleway:400,700,600,500,300,200,100,800,900' rel='stylesheet' type='text/css'> 
@@ -30,257 +30,11 @@
 		<link href="assets/css/venobox.css" rel="stylesheet" type="text/css"/>
 		<link href="assets/css/styles.css" rel="stylesheet"/>
 		<link href="assets/css/queries.css" rel="stylesheet"/>
-
-		<link href="assets/css/jquery.countdown.css" rel="stylesheet" type="text/css" >
-
-
-
-
-		<link href='https://fonts.googleapis.com/css?family=Permanent+Marker' rel='stylesheet' type='text/css'>
-
-		<link href='https://fonts.googleapis.com/css?family=Patrick+Hand+SC' rel='stylesheet' type='text/css'>
-
-
-		<link href='https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic' rel='stylesheet' type='text/css'>
-
 	  
 		<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 		<![endif]-->
-
-
-
-
-
-
-
-<style>
-
-
-
-.dodo{
-	margin: 30px 0px 30px 0px !important;
-}
-
-
-
-/*this is where jQuery appends the instagram json response*/
-#instagram {
-    
-    padding: 20px;
-
-  
-}
-
-/*around each image*/
-.instagram-wrap {
-    float: left;
-    position: relative;
-    background: white;
-    padding: 5px;
-   
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-
-     margin: 10px 10px 10px 10px;
-
-}
-
-
-
-
-.instagram-wrap .likes {
-    height: 16px;
-    position: absolute;
-    left: 10px;
-    top: 10px;
-    padding: 0 5px 0 22px;
-    line-height: 16px;
-    border: 1px solid #ddd;
-    background: white url('../img/fav.png') no-repeat 2px 0;
-    opacity: 0.6;
-}
-
-/*does what it says*/
-.clearfix {
-     clear:both;
-}
-
-/*wrapper for more pics*/
-#showMore{
-    background: #202628;
-    margin: 20px 15px 28px;
-    text-align: center;
-}
-
-/*button for more pics if available*/
-#more {
-padding: 10px;
-margin: 20px;
-color: #CCC;
-font-size: 20px;
-line-height: 22px;
-display: block;
-font-family: "brandon_bold",Arial,Helvetica,sans-serif;
-}
-
-
-
-
-</style>
-
-
-
-<div id="page">
-<div id="main_content_wrapper" class="clearfix">
-<div id="content_wrapper_box">
-
-
-
-
-<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
-<style>
-#main-navigation #navigation li.has-drop-down.trend{display: none;}
-
-/******  hide the footer for easier dev *********/
-#sticky-footer-wrap{/* display: none; */ }
-
-/******  hide the footer flyouts for easier dev *********/
-.sticky-flyout, #Footer_Flyout_1, #Footer_Flyout_2{ /* display: none !important; */ }
-</style>
-
-
-
-
-
-
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-69540957-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-
-
-
-
-<script type="text/javascript" >
-
-
-
-
-////////////////////////////////
-//
-// CONFIGURATION VARIABLES http://stuffthatspins.com/2014/03/11/display-instagram-hashtag-and-user-picture-stream-really-easy-with-jquery-and-json/
-//
-////////////////////////////////
-
-var access_token = "2195575811.1677ed0.5361a60591744464886c46ec411f03c8"; //*** YOU NEED TO GET YOUR OWN ACCESS TOKEN FROM INSTAGRAM
-//http://instagram.com/developer/authentication/
-//http://dmolsen.com/2013/04/05/generating-access-tokens-for-instagram/
-
-var resolution = "standard_resolution"; // resolution: low_resolution, thumbnail, standard_resolution
-var user_id = "2195575811"; //userid
-var hashtag = "ideaspartymx"; // #hashtag
-var last_url = "";
-
-//HASHTAG URL - USE THIS URL FOR HASHTAG PICS
-//var start_url = "https://api.instagram.com/v1/tags/"+hashtag+"/media/recent/?access_token="+access_token;
-//USER URL - USE THIS URL FOR USER PICS
-var start_url = "https://api.instagram.com/v1/users/"+user_id+"/media/recent/?access_token="+access_token;
-
-//https://api.instagram.com/v1/tags/racehungry/media/recent?access_token=1836…6303057241113856435_1395676110362&_=1395676128688&max_tag_id=1343521624608
-
-function loadEmUp(next_url){
-
-    //console.log("loadEmUp url:" + next_url);
-    url = next_url;
-    
-    $(function() {
-        $.ajax({
-                type: "GET",
-                dataType: "jsonp",
-                cache: false,
-                url: url ,
-                success: function(data) {
-                
-                next_url = data.pagination.next_url;
-                //count = data.data.length;
-                //three rows of four
-                count = 6; 
-        
-                //uncommment to see da codez
-                //console.log("count: " + count );
-                //console.log("next_url: " + next_url );
-                //console.log("data: " + JSON.stringify(data) );
-                
-                for (var i = 0; i < count; i++) {
-                        if (typeof data.data[i] !== 'undefined' ) {
-                        //console.log("id: " + data.data[i].id);
-                            $("#instagram").append("<div class='instagram-wrap' id='pic-"+ data.data[i].id +"' ><a target='_blank' href='" + data.data[i].link +"'><span class='likes'>"+data.data[i].likes.count +"</span><img class='instagram-image' src='" + data.data[i].images.low_resolution.url +"' /></a></div>"
-                        );  
-                        }  
-                }     
-                        
-                console.log("next_url: " + next_url);
-                $("#showMore").hide();
-                if (typeof next_url === 'undefined' || next_url.length < 10 ) {
-                    console.log("NO MORE");
-                    $("#showMore").hide();
-                    $( "#more" ).attr( "next_url", "");
-                }
-                
-                
-                else {
-                    //set button value
-                    console.log("displaying more");
-                    $("#showMore").show();
-                    $( "#more" ).attr( "next_url", next_url);
-                    last_url = next_url;
-                    
-                }
-            }
-        });
-    });
-}
-
-    
-
-
-//CALL THE SCRIPT TO START...
-$( document ).ready(function() {
-    
-    //APPEND LOAD MORE BUTTON TO THE BODY...
-    $("#more" ).click(function() {  
-        var next_url = $(this).attr('next_url');
-        loadEmUp(next_url);
-        return false;
-    });
-
-    //start your engines
-    loadEmUp(start_url);
-
-    
-});
-
-</script>
-
-
-
-
-
-
-
-
-
-
-
 	
 	</head>
 	   
@@ -304,15 +58,15 @@ $( document ).ready(function() {
 						 <span class="icon-bar"></span>
 						 <span class="icon-bar"></span>
 					  </button>
-					   <a class="navbar-brand" data-scroll href="#sec_1"><img src="assets/img/logo.png"  alt="logo"/></a>
+					   <a class="navbar-brand" data-scroll href="#sec_1"><img src="assets/img/ideasparty.gif" width="55%" alt="Ideas Party"/></a>
 				   </div>
 				   <div class="collapse navbar-collapse" id="example-navbar-collapse">
 					  <ul class="nav navbar-nav">
-						<li><a data-scroll href="#intro">Nosotros</a></li>
+						<li><a data-scroll href="#intro">El Congreso</a></li>
 						<li><a data-scroll href="#responsive">El Programa</a></li>
-						<li><a data-scroll href="#team">Invitados</a></li>
-						
-						<li><a data-scroll href="#sponsers">Patrocinadores</a></li>
+						<li><a data-scroll href="#team">Los Speakers</a></li>
+						<li><a data-scroll href="#portfolio">Registro</a></li>
+						<li><a data-scroll href="#sponsers">Sponsors</a></li>
 						<li><a data-scroll href="#contact">Contacto</a></li>
 					  </ul>
 				   </div>
@@ -332,1365 +86,53 @@ $( document ).ready(function() {
 		
 			<div class="home-bg"></div>
 			<div class="col-lg-12 landing-text-pos align-center">
-
-
-			<h1 class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="1s">Acusados de hacer realidad<br> nuestras ideas.</h1>
+				<h1 class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="1s">27 DE OCTUBRE 2016</h1>
 				<hr id="title_hr"/>
-				<p class="wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="1s">27 de Octubre 2016</p>
-				<a class="learn-more-btn btn-effect wow2 animated fadeIn" data-wow-duration="0.5s" data-wow-delay="1.5s" data-scroll href="#swag">Termina tu registro </a>
+				<p class="wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="1s">TECNOLOGICO DE MONTERREY.</p>
+				<a class="learn-more-btn btn-effect wow animated fadeIn" data-wow-duration="0.5s" data-wow-delay="1.5s" data-scroll href="#swag">Termina tu registro</a>
 
+				<a class="">Y si aun no tienes tu entrada</a>
+				<a class="learn-more-btn2 btn-effect wow animated fadeIn" data-wow-duration="0.5s" data-wow-delay="1.5s" data-scroll href="">¡Compra aquí tu boleto!</a>
 
-				<br>
-				<br>
-
-
-				<a class="osi">Y si aun no tienes tu entrada</a>
-
-				<a class="superboletos  wow animated fadeIn cta33" data-wow-duration="0.5s" data-wow-delay="1.5s" data-scroll href="https://www.taquillacero.com/ideas-party-2016/centro-convenciones-tec-monterrey/2016/10/27" target="blank">Compra tu boleto</a>
-
-
-
-
-
-
-				<h1 class="wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="1s"></h1>
-				<hr id="title_hr"/>
-				<p class="wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="1s"></p>
-
-				<a class="learn-more-btn btn-effect wow animated fadeIn cta33" data-wow-duration="0.5s" data-wow-delay="1.5s" data-scroll href="#swag"></a>
-
-
-				<br>
-				<br>
-
-
-
-
-					<a></a>
-
-				<a class="superboletos  wow animated fadeIn cta33" data-wow-duration="0.5s" data-wow-delay="1.5s" data-scroll href="#swag"></a>
-
-
-				
 			</div>
 		</section>
 		<!--/HOME-->
-
-
-
-
-		<div class="preloader">
-		<div class="status"></div>
-	</div>
-	<!-- /PRELOADER -->
-
-
-
-
-
-
-
-
-
-
-
 		
 		<!--ABOUT-->	
         <section class="intro text-center section-padding" id="intro">
 			<div class="container wow animated fadeInLeft animated" data-wow-duration="1s" data-wow-delay="0.5s">
 				<div class="row">
 					<div class="col-lg-8 align-center about">
-						<h1 class="arrow">Un concepto único de congreso</h1>
+						<h1 class="arrow">UN CONCEPTO ÚNICO DE CONGRESO</h1>
 						<hr>
 						<p>
-							
 							Es un congreso donde se reúnen jóvenes universitarios y público en general para convivir con empresarios y emprendedores, donde hablarán sobre historias de éxito locas e irreverentes, historias que han cambiado la manera cotidiana de hacer las cosas, entre otras experiencias. Todo esto en un ambiente de competitividad, networking y diversión. 
-
 
 						</p>
 					</div>
-
-
-					<div class="nl-submit-wrap">
-								
-<!--/ABO
-
-					<a class="btn btn-default comprame btn-effect" href="https://www.taquillacero.com/ideas-party/tecnologico-de-monterrey/2015/11/26" target="blank" role="button">CONFIRMAR MI ASISTENCIA:</a>
-					</div>	
-
-UT-->
-
-
 				</div>
 			</div>
         </section>
 		<!--/ABOUT-->
-
-
-
-
-
-
-	
-
-
-
-
-
         
        
-        <!--FEATURE
-
+        <!--FEATURES-->	
         <section class="features text-center" id="features">
 			<div class="row">
-				
-			
-				<div class="grid-gal">
-				  <figure class="block-hover vimeo-video col-lg-12 col-sm-12">
-					<a class="venoboxvid" data-type="youtube"  href="Y56HIye8qEc" target="_self">
-						<img src="assets/img/vdo-icn.png" alt="video_hover">
-						<span>
-							
-PLAY
-
-						</span>
-					</a>
-				  </figure>
-				</div>
-
-			</div>
-        </section>
-
-
-
-
-
-
-
-      FEATURES-->	
-
-
-
-
-        
-
-        <section class="text-center section-padding elgranpedo " id="responsive">
-
-
-
-			<div class="container wow animated fadeInLeft bottom-spacing">
-				<div class="row">
-					<div class="col-md-8 align-center wow animated fadeInLeft">
-						<h1 class="arrow titulon">26 de Noviembre</h1><hr>
-						<p class="titulin">Historias de éxito de quien creyó en su idea y retó a lo cotidiano; todo esto en un ambiente de música, competitividad y éxito.</p>
-
-
-						<div class="nl-submit-wrap">
-								
-
-
-					
-
-
-
-					</div>
-				</div>
-			</div>
-
-
-
-
-			
-			<div class="container-schedule container wow animated fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
-
-
-
-
-
-				<div id="tabs-ui" class="tabs">
-					<nav>
-						<ul>
-							<li><a href="#section-1"><span></span></a></li>
-							
-						</ul>
-					</nav>
-					<div class="content">
-						<section id="section-1">
-							<div class="container">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <!--FEATURE
-
-
-
-								<div class="accordion">
-									
-									<div class="item clearfix">
-										<div class="heading clearfix">
-											<div class="acordon33 time col-md-3 col-sm-12 col-xs-12">9:00-10:00</div>
-											<div class="acordon33 e-title col-md-9 col-sm-12 col-xs-12">
-												REGISTRO<br/>
-												
-											</div>
-										</div>
-										
-									</div>
-
-									<div class="item clearfix">
-										<div class="heading clearfix">
-											<div class="acordon33 time col-md-3 col-sm-12 col-xs-12">10:30-11:00</div>
-											<div class="acordon33 e-title col-md-9 col-sm-12 col-xs-12">
-												BIENVENIDA <span class="name">Happening </span><br/>
-												
-											</div>
-										</div>
-										
-									</div>
-								  
-								  
-									<div class="item clearfix">
-										<div class="heading">
-											<div class="acordon33 time col-md-3 col-sm-12 col-xs-12">11:00-12:00</div>
-											<div class="acordon33 e-title col-md-9 col-sm-12 col-xs-12">SER EMPRENDEDORES SUSTENTABLES<br/><span class="name">GABRIEL QUADRI - </span><span class="speaker-designaition">Excandidato a Presidencia de la República Mexicana</span></div>
-										</div>
-										<div class="acordon col-md-12 col-sm-12 col-xs-12">
-											<div class="acordon content venue col-md-3 col-sm-12 col-xs-12">
-											
-											</div>
-											<div class="acordon content details col-md-9 col-sm-12 col-xs-12">
-										
-											</div>
-										</div>
-									</div>
-
-
-									<div class="item clearfix">
-										<div class="heading">
-											<div class="acordon33 time col-md-3 col-sm-12 col-xs-12">12:00-1:00</div>
-											<div class="acordon33 e-title col-md-9 col-sm-12 col-xs-12">EMPRENDER EN PROYECTOS QUE IMPACTEN SOCIEDADES<br/><span class="name">EDUARDO EZBAN - </span><span class="speaker-designaition">New Ventures México</span></div>
-										</div>
-										<div class="acordon col-md-12 col-sm-12 col-xs-12">
-											<div class="acordon content venue col-md-3 col-sm-12 col-xs-12">
-												
-											</div>
-											<div class="acordon content details col-md-9 col-sm-12 col-xs-12">
-											
-											</div>
-										</div>
-									</div>
-
-								  
-									<div class="item clearfix">
-										<div class="heading">
-											<div class="acordon33 time col-md-3 col-sm-12 col-xs-12">1:00-2:00</div>
-											<div class="acordon33 e-title col-md-9 col-sm-12 col-xs-12">FONDEADORA ES DINERO PARA TUS IDEAS<br/><span class="name">EDUARDO SUAREZ - </span><span class="speaker-designaition">FONDEADORA</span></div>
-										</div>
-										<div class="acordon col-md-12 col-sm-12 col-xs-12">
-											<div class="acordon content venue col-md-3 col-sm-12 col-xs-12">
-											
-
-
-											</div>
-											<div class="acordon content details col-md-9 col-sm-12 col-xs-12">
-											
-
-
-
-											</div>
-										</div>
-									</div>
-
-									<div class="item clearfix">
-										<div class="heading clearfix">
-											<div class="acordon33 time col-md-3 col-sm-12 col-xs-12">2:00-4:00</div>
-											<div class="acordon33 e-title col-md-9 col-sm-12 col-xs-12">
-												BREAK<br/>
-												
-											</div>
-										</div>
-										
-									</div>
-
-
-									<div class="item clearfix">
-										<div class="heading">
-											<div class="acordon33 time col-md-3 col-sm-12 col-xs-12">4:00-5:00</div>
-											<div class="acordon33 e-title col-md-9 col-sm-12 col-xs-12">LA LOCURA DE EMPRENDER<br/><span class="name">CARLOS ANAYA - </span><span class="speaker-designaition">CEO Parkimovil</span></div>
-										</div>
-										<div class="acordon col-md-12 col-sm-12 col-xs-12">
-											<div class="acordon content venue col-md-3 col-sm-12 col-xs-12">
-												
-
-											</div>
-											<div class="acordon content details col-md-9 col-sm-12 col-xs-12">
-											
-
-
-											</div>
-										</div>
-									</div>
-
-									<div class="item clearfix">
-										<div class="heading">
-											<div class="acordon33 time col-md-3 col-sm-12 col-xs-12">5:00-6:00</div>
-											<div class="acordon33 e-title col-md-9 col-sm-12 col-xs-12">SHARING ECONOMY<br/><span class="name">RICARDO CARVALLO - </span><span class="speaker-designaition">CEO Uber Puebla</span></div>
-										</div>
-										<div class="acordon col-md-12 col-sm-12 col-xs-12">
-											<div class="acordon content venue col-md-3 col-sm-12 col-xs-12">
-												
-
-											</div>
-											<div class="acordon content details col-md-9 col-sm-12 col-xs-12">
-											
-
-
-											</div>
-										</div>
-									</div>
-
-
-									<div class="item clearfix">
-										<div class="heading">
-											<div class="acordon33 time col-md-3 col-sm-12 col-xs-12">6:00-7:00</div>
-											<div class="acordon33 e-title col-md-9 col-sm-12 col-xs-12">SER EMPRENDEDORES AL ESTILO SILICON VALLEY<br/><span class="name"> PRAVEEN GUPTA - </span><span class="speaker-designaition">CEO Accelper Consulting Silicon Valley</span></div>
-										</div>
-										<div class="acordon col-md-12 col-sm-12 col-xs-12">
-											<div class="acordon content venue col-md-3 col-sm-12 col-xs-12">
-												
-
-											</div>
-											<div class="acordon content details col-md-9 col-sm-12 col-xs-12">
-											
-
-
-											</div>
-										</div>
-									</div>
-
-
-									<div class="item clearfix">
-										<div class="heading">
-											<div class="acordon33 time col-md-3 col-sm-12 col-xs-12">8:00</div>
-											<div class="acordon33 e-title col-md-9 col-sm-12 col-xs-12">FIESTA DE CLAUSURA<br/><span class="name"> JUAN Y LOLA PUEBLA - </span><span class="speaker-designaition">Teziutlan Sur no.78 Colonia La Paz</span></div>
-										</div>
-										<div class="acordon col-md-12 col-sm-12 col-xs-12">
-											<div class="acordon content venue col-md-3 col-sm-12 col-xs-12">
-												
-
-											</div>
-											<div class="acordon content details col-md-9 col-sm-12 col-xs-12">
-											
-
-
-											</div>
-										</div>
-									</div>
-
-
-								</div>  
-
-
-
--/ABOUT-->
-
-
-
-
-
-
-
-
-
-
-
-
-							</div>
-
-						</section>
-						
-					</div>
-
-
-				</div>
-			</div>
-
-
-			
-        </section>
-
-
-
-
-
-
-		
-		
-		<!-- Event social links and download-->
-	
-
-
-
-		
-		<!--LINE UP-->   
-
-
-
-
-
-        
-
-
-
-
-
-		
-		
-		<!-- Event social links and download-->
-				
-		<!--/SCHEDULE-->
-        
-        <!--Artists-->
-        <section class="team text-center section-padding elgranpedo" id="team">
-
-
-
-
-
-
-
-
-
-
-        <!--/ABOUT-->
-
-
-			<div class="container">
-				<div class="row">
-				  <div class="col-lg-8 wow animated fadeInUp align-center" data-wow-duration="1s" data-wow-delay="1s">
-
-
-
-
-				
-
-						<img src="assets/img/brain.png" width="32%" >
-					<h1 class="arrow">Nuestros Invitados</h1><hr>
-
-
-					<p>Estos son los locos, los innovadores, y los rebeldes que confiaron en sus ideas y hoy ven como gracias a su esfuerzo estan cambiando el mundo. Conocelos.</p>
-
-
-					
-
-				  </div>
-				</div>
-
-
-				<div class="row">
-
-
-
-					<div class="speakers-wrap">
-
-
-
-
-						
-
-
-
-						<div id="portfolioSlider">
-							<ul class="slides">
-								<li>
-									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-										<div class="overlay-effect effects clearfix">
-											<div class="img">
-											  <img src="assets/img/team/team1.png" alt="Portfolio Item">
-											  <div class="overlay">
-												<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>Ver Perfil</button>
-											  </div>
-											</div>
-										</div>
-										<h2>Gabriel Quadri</h2>
-										<p>Excandidato a Presidencia de la República Mexicana</p>
-									</div>
-
-									
-
-									
-
-									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
-										<div class="overlay-effect effects clearfix">
-											<div class="img">
-												<img src="assets/img/team/team3.png" alt="Portfolio Item">
-												<div class="overlay">
-													<button class="md-trigger expand" data-modal="modal-11"><i class="fa fa-search"></i><br>Ver Perfil</button>
-												</div>
-											</div>
-										</div>
-										<h2>Praveen Gupta</h2>
-										<p>CEO Accelper Consulting Silicon Valley</p>
-									</div>
-
-
-
-									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
-										<div class="overlay-effect effects clearfix">
-											<div class="img">
-											  <img src="assets/img/team/team4.png" alt="Portfolio Item">
-											  <div class="overlay">
-												<button class="md-trigger expand" data-modal="modal-12"><i class="fa fa-search"></i><br>Ver Perfil</button>
-											  </div>
-											</div>
-										</div>
-										<h2>Eduardo Suárez</h2>
-										<p>Director Comercial Fondeadora</p>
-									</div>
-
-
-
-								</li>
-							
-								
-							</ul>
-						</div>
-
-
-
-
-
-						<div id="portfolioSlider">
-							<ul class="slides">
-								<li>
-									
-
-									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">
-										<div class="overlay-effect effects clearfix">
-											<div class="img">
-												<img src="assets/img/team/team5.png" alt="Portfolio Item">
-												<div class="overlay">
-													<button class="md-trigger expand" data-modal="modal-13"><i class="fa fa-search"></i><br>Ver Perfil</button>
-												</div>
-											</div>
-										</div>
-										<h2>Eduardo Ezban</h2>
-										<p>New Ventures México</p>
-									</div>
-
-									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
-										<div class="overlay-effect effects clearfix">
-											<div class="img">
-												<img src="assets/img/team/team6.png" alt="Portfolio Item">
-												<div class="overlay">
-													<button class="md-trigger expand" data-modal="modal-14"><i class="fa fa-search"></i><br>Ver Perfil</button>
-												</div>
-											</div>
-										</div>
-										<h2>Carlos Anaya</h2>
-										<p>CEO Parkimovil</p>
-									</div>
-
-
-
-									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
-										<div class="overlay-effect effects clearfix">
-											<div class="img">
-												<img src="assets/img/team/team99.png" alt="Portfolio Item">
-												<div class="overlay">
-													<button class="md-trigger expand" data-modal="modal-15"><i class="fa fa-search"></i><br>Ver Perfil</button>
-												</div>
-											</div>
-										</div>
-										<h2>Ricardo Carvallo</h2>
-										<p>CEO Uber Puebla</p>
-									</div>
-
-
-
-
-								</li>
-								
-								
-							</ul>
-						</div>
-
-
-
-
-
-
-
-
-					</div>
-				</div> 
-			</div>
-			
-			<div class="md-modal md-effect-9" id="modal-9">
-				<div class="md-content">
-					<div class="folio">
-						<div class="avatar1"></div>
-						<div class="sp-name"><strong>Gabriel Quadri</strong></div>
-						<div class="sp-dsc">
-						Música favorita: música disco y la canción que lo inspira es el guapango de Moncayo.
-						<br>
-
-Melómano y amante de la lectura, sus libros favoritos: Juan Rulfo Pedro Paramo, El maestro y 
-
-Margarita de Mijaíl Bulgakov.
-<br>
-
-Entrenador político, referente en energías renovables, liberal, Ingeniero Civil por la Ibero y con 
-
-Maestría y Doctorado en la Universidad de Texas.
-
-Ganador del premio Walter Reuter en 2010 por sus artículos sobre el cambio climático. Director de 
-
-SIGEA empresa enfocada en el cambio climático.
-
-
-						</div>
-						<div class="sp-social">
-							<ul>
-								<li><a href="https://twitter.com/g_quadri" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="https://www.facebook.com/GabrielQuadri" class="social-btn"><i class="fa fa-facebook"></i></a></li>
-								
-							
-							</ul>
-						</div>
-						<button class="md-close"><i class="fa fa-times"></i></button>
-					</div>
-				</div>
-			</div> 
-
-
-			 
-
-
-
-			<div class="md-modal md-effect-9" id="modal-11">
-				<div class="md-content">
-					<div class="folio">
-						<div class="avatar3"></div>
-						<div class="sp-name"><strong>Praveen Gupta</strong></div>
-						<div class="sp-dsc">
-
-
-
-
-
-
-
-
-						Director ejecutivo de TiE y organizador del TIECON que ha contado con speakers como Tim Cook 
-
-y Bill Gates.
-
-Con estudios en economía en Londres donde comenzó su carrera en The Coopers & lybrand ahora 
-
-PWC. Experto en el mercado Internacional y mentor de emprendimiento en Sillicon Valey. Ha 
-
-participado en proyectos altruistas con personalidades como Bill Clinton, el Presidente de India y el 
-
-Primer Ministro de Reino Unido.
-						</div>
-						<div class="sp-social">
-							<ul>
-								
-
-								<li><a href="https://www.linkedin.com/in/praveengupta" class="social-btn"><i class="fa fa-linkedin"></i></a></li>
-								
-								
-							
-							</ul>
-						</div>
-						<button class="md-close"><i class="fa fa-times"></i></button>
-					</div>
-				</div>
-			</div> 
-
-
-
-
-			<div class="md-modal md-effect-9" id="modal-12">
-				<div class="md-content">
-					<div class="folio">
-						<div class="avatar4"></div>
-						<div class="sp-name"><strong>Eduardo Suárez</strong></div>
-						<div class="sp-dsc">
-					Lo inspira: Ayrton Senna
-
-					<br>
-
-Canción favorita es: Bombay del Guincho.
-
-<br>
-
-
-
-El Crowdfunding es una nueva manera de hacer realidad tus sueños y de costear proyectos 
-
-imposibles.
-
-Director comercial de FONDEADORA la plataforma de Crowdfunding con más éxito en 
-
-Latinoamérica, recaudando desde 2011 más de 5millones de dólares.
-
-						</div>
-						<div class="sp-social">
-							<ul>
-								<li><a href="https://mx.linkedin.com/pub/eduardo-su%C3%A1rez/99/644/6a" class="social-btn"><i class="fa fa-linkedin"></i></a></li>
-								
-								
-							
-							</ul>
-						</div>
-						<button class="md-close"><i class="fa fa-times"></i></button>
-					</div>
-				</div>
-			</div> 
-
-
-			<div class="md-modal md-effect-9" id="modal-13">
-				<div class="md-content">
-					<div class="folio">
-						<div class="avatar5"></div>
-						<div class="sp-name"><strong>Eduardo Ezban</strong></div>
-						<div class="sp-dsc">
-					Desde hace 10 años New Ventures es la plataforma líder en capitalización de empresas sociales y 
-
-ambientales a través de financiamiento, aceleración y promoción de proyectos nuevos e 
-
-innovadores que impacten a la base de la pirámide.
-						</div>
-						<div class="sp-social">
-							<ul>
-								<li><a href="https://www.linkedin.com/in/eduardo-ezban-256665a4" class="social-btn"><i class="fa fa-linkedin"></i></a></li>
-								
-								
-							
-							</ul>
-						</div>
-						<button class="md-close"><i class="fa fa-times"></i></button>
-					</div>
-				</div>
-			</div> 
-
-
-			<div class="md-modal md-effect-9" id="modal-14">
-				<div class="md-content">
-					<div class="folio">
-						<div class="avatar6"></div>
-						<div class="sp-name"><strong>Carlos Anaya</strong></div>
-						<div class="sp-dsc">
-					Los chinos mas perfectos de todo Puebla y no es base; un abogado que dejo los tribunales por la tecnologia. Se inspira con el Pirata Cojo de Joaquin Sabina. Este crack ha sido premiado mundialmente por su apps.
-						</div>
-						<div class="sp-social">
-							<ul>
-								<li><a href="https://www.linkedin.com/in/carlos-anaya-rodr%25C3%25ADguez-30926645" class="social-btn"><i class="fa fa-linkedin"></i></a></li>
-								
-								
-							
-							</ul>
-						</div>
-						<button class="md-close"><i class="fa fa-times"></i></button>
-					</div>
-				</div>
-			</div> 
-
-
-
-
-
-			<div class="md-modal md-effect-9" id="modal-15">
-				<div class="md-content">
-					<div class="folio">
-						<div class="avatar7"></div>
-						<div class="sp-name"><strong>Ricardo Carvallo</strong></div>
-						<div class="sp-dsc">
-						Canción favorita: Every Teardrop is a waterfall.
-
-						<br>
-
-El personaje que lo inspira es: Roger Federer
-
-
-<br>
-
-CEO en Puebla de la idea que está transformando el transporte privado en el mundo UBER.
-						</div>
-						<div class="sp-social">
-							<ul>
-								<li><a href="https://instagram.com/ricardo.carvallo" class="social-btn"><i class="fa fa-instagram"></i></a></li>
-								
-								
-							
-							</ul>
-						</div>
-						<button class="md-close"><i class="fa fa-times"></i></button>
-					</div>
-				</div>
-			</div> 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			<div class="md-overlay"></div>
-			<!-- /Example Speaker -->
-        </section>
-		<!--/SPEAKER-->
-
-
-
-
-
-
-
-
-
-		
-		
-		<!--/PRICING-->
-       
-
-       <!--SPONSORS-->	
-        <div id="sponsers" class="ignite-cta text-center section-padding elgranpedo">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 align-center wow animated fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
-						<h1 class="arrow">Nuestros Patrocinadores</h1><hr>
-						
-					</div>
-					<!-- Jssor Slider Begin -->
-					<div id="slider1_container" style=" ">
-						<div class="inner_carousal" data-u="slides" style="">
-							<div></div>
-							
-							
-						</div>
-
-					</div>
-
-
-
-					<div class="col-md-12 col-sm-12 dodo">
-
-					<a href="https://es-la.facebook.com/socialbusiness.mx" target="blank"><img src="assets/img/sponsor/sp7.png"></a>
-						
-					</div>
-
-
-
-
-
-					<div class="col-md-12 col-sm-12">
-
-
-
-					
-
-					<br>
-
-
-					<div class="col-md-4 col-sm-4 dodo">
-
-					<a href="http://www.itesm.mx/wps/wcm/connect/Campus/PUE/Puebla/" target="blank"><img src="assets/img/sponsor/sp1.png"></a>
-						
-					</div>
-
-
-					<div class="col-md-4 col-sm-4 dodo">
-
-					<a href="http://www.odysseetrip.com/" target="blank"><img src="assets/img/sponsor/sp3.png"></a>
-						
-					</div>
-
-
-				
-
-
-					<div class="col-md-4 col-sm-4 dodo" >
-
-					<a href="http://www.ccplazadorada.com/" target="blank"><img src="assets/img/sponsor/sp4.png"></a>
-						
-					</div>
-
-
-
-
-					</div>
-
-
-
-
-					
-
-
-
-
-
-					<div class="col-md-12 col-sm-12">
-
-
-
-					
-
-
-					
-
-
-
-					<div class="col-md-4 col-sm-4 dodo">
-
-					<a href="http://thinkersinmotion.mx/" target="blank"><img src="assets/img/sponsor/sp2.png"></a>
-						
-					</div>
-
-
-
-
-
-
-					<div class="col-md-4 col-sm-4 dodo">
-
-					<a href="http://www.sexenio.com.mx/puebla/" target="blank"><img src="assets/img/sponsor/sp24.png"></a>
-						
-					</div>
-
-
-					
-
-					<div class="col-md-4 col-sm-4 dodo">
-
-					<a href="http://www.showbix.com/servicios-para-eventos/fiestas-tematicas/wally-wm-producciones" target="blank"><img src="assets/img/sponsor/sp5.png"></a>
-						
-					</div>
-
-
-
-
-
-					</div>
-
-
-
-
-
-
-
-
-
-
-
-					<div class="col-md-12 col-sm-12 dodo">
-
-					
-
-					<a href="https://www.facebook.com/juanylolapuebla" target="blank"><img src="assets/img/sponsor/sp22.png"></a>
-						
-					</div>
-
-
-
-
-
-					<hr></hr>
-
-
-
-
-
-
-
-
-
-
-					<div class="col-md-12 col-sm-12">
-
-
-
-
-
-					<div class="col-md-3 col-sm-3 dodo">
-
-					<a href="https://www.facebook.com/Fractal-Studio-237122213036619/" target="blank"><img src="assets/img/sponsor/sp11.png"></a>
-						
-					</div>
-
-
-
-					<div class="col-md-3 col-sm-3 dodo">
-
-					<a href="http://www.e-consulta.com/" target="blank"><img src="assets/img/sponsor/sp9.png"></a>
-						
-					</div>
-
-
-					<div class="col-md-3 col-sm-3 dodo">
-
-					<a href="http://www.puebla.mx/tv.php" target="blank"><img src="assets/img/sponsor/sp10.png"></a>
-						
-					</div>
-
-					<div class="col-md-3 col-sm-3 dodo">
-
-					<a href="http://www.todopuebla.com/" target="blank"><img src="assets/img/sponsor/sp6.png"></a>
-						
-					</div>
-
-
-
-					
-
-
-
-
-					</div>
-
-
-
-					<div class="col-md-12 col-sm-12">
-
-
-
-					<div class="col-md-3 col-sm-3 dodo">
-
-					<a href="https://www.facebook.com/conexionpuebla" target="blank"><img src="assets/img/sponsor/sp17.png"></a>
-						
-					</div>
-
-
-
-
-
-					<div class="col-md-3 col-sm-3 dodo">
-
-					<a href="http://www.grupoelpretex.com.mx/uniformes-industriales/" target="blank"><img src="assets/img/sponsor/sp23.png"></a>
-						
-					</div>
-
-
-
-
-
-					<div class="col-md-3 col-sm-3 dodo">
-
-					<a href="https://es-es.facebook.com/comercializadoragreblica" target="blank"><img src="assets/img/sponsor/sp20.png"></a>
-						
-					</div>
-
-
-					
-
-
-
-
-
-					
-
-
-					
-
-
-					
-
-
-					<div class="col-md-3 col-sm-3 dodo">
-
-					<a href="http://parkimovil.com/" target="blank"><img src="assets/img/sponsor/sp16.png"></a>
-						
-					</div>
-
-
-
-					</div>
-
-
-
-
-
-
-					
-
-
-					<div class="col-md-3 col-sm-3 dodo">
-
-					<a href="http://skyvigilant.jimdo.com" target="blank"><img src="assets/img/sponsor/sp12.png"></a>
-						
-					</div>
-
-
-
-					<div class="col-md-3 col-sm-3 dodo">
-
-					<a href="http://laboratorioscastillo.com.mx/" target="blank"><img src="assets/img/sponsor/sp8.png"></a>
-						
-					</div>
-
-
-
-
-					
-
-
-
-
-
-
-
-					<div class="col-md-3 col-sm-3 dodo">
-
-					<a href="https://www.facebook.com/Geeks-Mex-491168464335166/timeline/" target="blank"><img src="assets/img/sponsor/sp14.png"></a>
-						
-					</div>
-
-
-
-					<div class="col-md-3 col-sm-3 dodo">
-
-					<a href="http://www.cargomovil.com.mx/geoenlace/" target="blank"><img src="assets/img/sponsor/sp15.png"></a>
-						
-					</div>
-
-					<div class="col-md-3 col-sm-3 dodo">
-
-					<a href="https://www.facebook.com/UniverpresariosPuebla" target="blank"><img src="assets/img/sponsor/sp18.png"></a>
-						
-					</div>
-
-
-					<div class="col-md-3 col-sm-3 dodo">
-
-					<a href="https://www.facebook.com/MineirosEnPuebla" target="blank"><img src="assets/img/sponsor/sp13.png"></a>
-						
-					</div>
-
-
-					
-
-
-
-
-
-
-
-
-
-
-
-					</div>
-
-
-
-
-					<!-- Jssor Slider End -->
-				</div>
-			</div>
-		</div>
-		 <!-- /SPONSORS -->	
-
-		<!--SUBSCRIBE-->	
-        <section class="subscribe elgranpedo text-center">
-			<div class="subscribe-overlay"></div>
-			<div class="container wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
-			<div class="col-md-12">
-				
-
-
-
-
-
-
-
-
-				<!-- Begin MailChimp Signup Form -->
-
-<style type="text/css">
-
-	#mc_embed_signup{ clear:center; font:14px Ubuntu; vertical-align: middle; }
-	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-
-
-
-
-
-
-
-
-
-
-	   /* MailChimp Form Embed Code - Slim - 08/17/2011 */
-#mc_embed_signup form {display:block; position:relative; text-align:center; padding:10px 0 10px 3%}
-#mc_embed_signup h2 {font-weight:bold; padding:0; margin:15px 0; font-size:1.4em;}
-#mc_embed_signup input {border:1px solid #999; -webkit-appearance:none;}
-#mc_embed_signup input[type=checkbox]{-webkit-appearance:checkbox;}
-#mc_embed_signup input[type=radio]{-webkit-appearance:radio;}
-#mc_embed_signup input:focus {border-color:#333;}
-#mc_embed_signup .button {clear:both; background-color: #EF8840; border: 0 none; border-radius:0px; color: #FFFFFF; cursor: pointer; display: inline-block; font-size:15px; font-weight: bold; height: 32px; line-height: 32px; margin: 0 5px 10px 0; padding:0; text-align: center; text-decoration: none; vertical-align: top; white-space: nowrap; width: auto;}
-#mc_embed_signup .button:hover {background-color:#D85C2F;}
-#mc_embed_signup .small-meta {font-size: 11px;}
-#mc_embed_signup .nowrap {white-space:nowrap;}     
-#mc_embed_signup .clear {clear:none; display:inline;}
-
-.clear {text-align: center;}
-
-#mc_embed_signup label {display:block; font-size:16px; padding-bottom:10px; font-weight:bold;}
-#mc_embed_signup input.email {text-align:center; display:block; padding:8px 0; margin:0 4% 10px 0; text-indent:5px; width:58%; min-width:130px;}
-#mc_embed_signup input.button {display:block; width:35%; margin:0 0 10px 0; min-width:90px;}
-
-#mc_embed_signup div#mce-responses {float:center; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
-#mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:center; top:-1.5em; z-index:1; width:80%;}
-#mc_embed_signup #mce-error-response {display:none;}
-#mc_embed_signup #mce-success-response {color:#529214; display:none;}
-#mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:center; padding:.5em 0;}
-
-
-
-
-
-
-
-
-</style>
-<div  id="mc_embed_signup">
-<form action="//ideasparty.us11.list-manage.com/subscribe/post?u=d63decec31a7ddd06a5a889ea&amp;id=ee902330cf" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-	<h1 for="mce-EMAIL">Nosotros te avisamos</h1>
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="¿A qué correo te notificamos?" required>
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_d63decec31a7ddd06a5a889ea_ee902330cf" tabindex="-1" value=""></div>
-
-
-
-    <div class="clear"><input type="submit" value="Envíar" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
-
-<!--End mc_embed_signup-->
-
-
-
-
-
-</div>
-
-
-
-
-
-			</div>
-        </section>
-		<!-- /SUBSCRIBE -->
-
-		<!--CONTACT-->	
-        <section class="text-center section-padding contact-wrap" id="contact">
-			<div class="container">
-				<div class="row">
-
-
-
-
-
-				<div class="col-md-8 wow animated fadeInLeft align-center" data-wow-duration="1s" data-wow-delay="0.3s">
-						<h1 class="arrow">Galería</h1><hr>
-						
-					</div>
-
-
-
-
-
-
 				<div id="grid-gallery" class="grid-gallery">
-					<section class="grid-wrap">
+					<section class="grid-wrap hide">
 						<div class="grid-gal">						
-							
-
-							 <div class="col-lg-12 col-sm-12">
-
-							
-
-
-
-							<!-- SnapWidget -->
-
-
-
-
-
-
-
-
-
- <!--INTRO SECTION END-->
-
-
-
-
-               <div>
-
-
-
-
-
-
-    <div id="instagram" max-width="10%"></div>
-    <div class='clearfix'></div>
-    
-    
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-							 </div> 
+							<figure class="block-hover 3d-gallery col-lg-3 col-sm-12">
+								<a href="#"><img src="assets/img/gallery/gal-icn.png" alt="img1">
+									<span>GALLERY</span>
+								</a>                            
+							</figure>
+						</div> 
 					</section>
 					<!--grid wrap-->
 
 					<!-- slideshow -->
 					<section class="slideshow">
-
-					
 						<ul>
 							<li>
 								<figure>											
@@ -1728,127 +170,1071 @@ CEO en Puebla de la idea que está transformando el transporte privado en el mun
 						</nav>
 					</section>
 					<!-- /slideshow -->
-
-
-
-
-
-			
-
-
-
 				</div>
+				<!-- /grid-gallery -->
 
-
-
-
-					<div class="col-md-8 wow animated fadeInLeft align-center" data-wow-duration="1s" data-wow-delay="0.3s">
-						<br>
-						<br>
-						<h1 class="arrow">Contacto</h1><hr>
-						
-					</div>
-				</div>
-
-
-
-
-
-       
-
-
-
-
-				<div class="row contact-details">
-					<div class="col-md-4 wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-						<div class="light-box box-hover">
-							<h2><span>WhatsApp</span></h2>
-							<p>222 310 6219</p>
-						</div>
-					</div>
-					<div class="col-md-4 wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.7s">
-						<div class="light-box box-hover">
-							<h2><span>Teléfono</span></h2>
-							<p>222 183 6469</p>
-						</div>
-					</div>
-					<div class="col-md-4 wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.9s">
-						<div class="light-box box-hover">
-							<h2><span>Email</span></h2>
-							<p><a href="mailto:ideaspartymx@gmail.com?Subject=Hola">ideaspartymx@gmail.com</a></p>
+				<div class="container col-lg-6 col-md-12 features-md">          
+					<div class="row">
+						<div class="col-md-12">
+							<div class="features-wrapper">
+								<div class="col-md-12 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+									<div class="icon">
+									  <a><img src="assets/img/brain.png" width="133px"></a>
+									</div>
+									
+									<p>Así se vivió el último Ideas Party, ¡No querrás perdértelo este año!</p>
+								</div>
+							  
+								
+								<div class="clearfix"></div>
+							</div>
 						</div>
 					</div>
 				</div>
-				
+
+				<!-- Vimoe Video-->	
+				<div class="grid-gal">
+				  <figure class="block-hover vimeo-video col-lg-6 col-sm-12">
+					<a class="venoboxvid" data-type="youtube"  href="9KyWKz9sYqU" target="_self">
+						<img src="assets/img/vdo-icn.png" alt="video_hover">
+						<span></span>
+					</a>
+				  </figure>
+				</div>
+
+			</div><!--row ends here-->
+        </section>
+        <!--/FEATURES-->	
+		
+		<!--LINE UP-->        
+        <section class="text-center section-padding" id="responsive">
+			<div class="container wow animated fadeInLeft bottom-spacing">
 				<div class="row">
-					<div class="col-md-12">
-						<ul class="social-buttons">
-							<li><a href="https://instagram.com/ideaspartymx/" target="blank" class="social-btn"><i class="fa fa-instagram"></i></a></li>
-							<li><a href="https://twitter.com/IdeasPartyMx" target="blank" class="social-btn"><i class="fa fa-twitter"></i></a></li>
-							<li><a href="https://www.youtube.com/channel/UCKJsIe4-XyKj5FtM8dafb3A" target="blank" class="social-btn"><i class="fa fa-youtube"></i></a></li>
-							<li><a href="https://www.facebook.com/ideaspartymx" target="blank" class="social-btn"><i class="fa fa-facebook"></i></a></li>
-							
-						</ul>
+					<div class="col-md-8 align-center wow animated fadeInLeft">
+						<h1 class="arrow">El Programa</h1><hr>
+						<p>
+							Historias de éxito de quien creyó en su idea y retó a lo cotidiano; todo esto en un ambiente de música, competitividad y éxito.
+
+						</p>
 					</div>
 				</div>
 			</div>
+			
+			<div class="container-schedule container wow animated fadeInDown animated" data-wow-duration="1s" data-wow-delay="1s">
+				<div id="tabs-ui" class="tabs">
+					<nav class="hide">
+						<ul>
+							<li><a href="#section-1"><span>Day 1</span></a></li>
+							<li><a href="#section-2"><span>Day 2</span></a></li>
+							<li><a href="#section-3"><span>Day 3</span></a></li>
+							<li><a href="#section-4"><span>Day 4</span></a></li>
+							<li><a href="#section-5"><span>Day 5</span></a></li>
+						</ul>
+					</nav>
+					<div class="content">
+						<section id="section-1">
+							<div class="container">
+								<div class="accordion">
+									<div class="day">27 DE OCTUBRE 2016</div>
+									<div class="item clearfix">
+										<div class="heading clearfix">
+											<div class="time col-md-3 col-sm-12 col-xs-12">8:30 - 10:00 HRS.</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">
+												Registro<br/>
+												<span class="name">Social Business  </span>
+												
+											</div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">10:00 - 11:00 HRS.</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Inauguración - Happening<br/><span class="name">Bienvenidos a Ideas Party - </span><span class="speaker-designaition">ft. Social Business</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Centro de Convenciones Tecnológico de Monterrey.
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											
+
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">11:00 - 12:00 HRS.</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Un Crack comienza en la mente
+											<br/><span class="name">Pepe Galván </span><span class="speaker-designaition">Fundador de Six Pack Mental.
+											</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Centro de Convenciones Tecnológico de Monterrey.
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											Top Performance Coach deportivo para atletas nacionales e internacionales. Entrenamiento mental para mejorar el rendimiento de deportistas dentro y fuera de la cancha.
+
+											Lleva la operación y logística de la Selección Mexicana de Futbol en USA.
+											Consultor de la MLS. Logística para Copa América y eventos internacionales.
+											Deportista, empresario y apasionado del futbol.
+
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">12:00 - 13:00 HRS.</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">El Efecto WOW, mi yo creativo<br/><span class="name">Mari Carmen Obregón - </span><span class="speaker-designaition">Fundadora y autora del libro El Efecto WOW.</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Centro de Convenciones Tecnológico de Monterrey.
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											
+											De las 30 mujeres promesa en los negocios según la revista Forbes México.
+											Speaker en Tedx Talks. Su conferencia ha sido escuchada en Frankfurt, Las Vegas, Miami, Nashville, Medellín, Bogotá, Cancún, Guadalajara, CDMX y más ciudades del mundo.
+											Apasionada de la creatividad y las mariposas amarillas.
+
+											</div>
+										</div>
 
 
+										<div class="item clearfix">
+										<div class="heading clearfix">
+											<div class="time col-md-3 col-sm-12 col-xs-12">13:00 - 14:00 HRS.</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Aprendiendo sobre la marcha<br/><span class="name">Diego Stommel - </span><span class="speaker-designaition">Fundador de Zoé Water. Manager de Haku.</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Centro de Convenciones Tecnológico de Monterrey.
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											
+											Director de Hedley & Bennett México. 
+											Baterista de Allison, ganador de dos discos de oro y platino. 
+											Empresario, rockero, amante de las motos y los perros. 
+
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">14:00 - 16:00 HRS.</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Break - Networking<br/><span class="name"></span><span class="speaker-designaition"></span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">16:00 - 17:00 HRS.</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Todos podemos hacer historia<br/><span class="name">Pepe Ramírez - </span><span class="speaker-designaition">Fundador de Mi Gran Socio.</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Centro de Convenciones Tecnológico de Monterrey.
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											Creativo de  campañas para Tequila Cuervo Tradicional, J&B, Start Media, Explora México, Mercedes  Benz, MVS Multivision, Corona entre otros.
+											Fundador de una de las primeras agencias de modelaje en CDMX haciendo pasarelas para Versace.
+											Empresario  intenso  y amante de las grandes ideas.
+
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">17:00 - 18:00 HRS.</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Platica Sorpresa<br/><span class="name">Invitado Especial - </span><span class="speaker-designaition">Discovery Chanel</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Centro de Convenciones Tecnológico de Monterrey.
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											
+											</div>
+										</div>
+									</div>
+
+
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">18:00 - 19:00 HRS.</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Hazla de pedo, deja huella<br/><span class="name">Jorge Gómez Pimienta (Yorsh de Polanco) - </span><span class="speaker-designaition">Fundador de Apache Brands.</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Centro de Convenciones Tecnológico de Monterrey.
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+												Nominado por MTV como fenómeno viral del año.
+												Su imagen es patrocinada por Pepsi, Heineken, TV Azteza, Jeep, Head & Shoulders, Sport City, Marti.  18 años de experiencia en marketing trabajando para Coca-Cola y PepsiCo.
+												Filántropo, empresario, deportista y amante de los perros y la naturaleza.
+
+											</div>
+										</div>
+									</div>
+
+
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">19:00 - 20:00 HRS.</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Clausura<br/><span class="name">Ideas Party - </span><span class="speaker-designaition">ft. Social Business</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Centro de Convenciones Tecnológico de Monterrey.
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											
+											</div>
+										</div>
+									</div>
+
+
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">20:00 HRS.</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Fiesta de clausura<br/><span class="name">Ideas Party - </span><span class="speaker-designaition">ft. Social Business</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Juan y Lola
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+
+											Teziutlan Sur no.78 Colonia La Paz
+											
+											</div>
+										</div>
+									</div>
+
+
+
+									</div>
+								</div>        
+							</div><!--CONTAINER ENDS-->
+						</section>
+						<section class="hide" id="section-2">
+							<div class="container">
+								<div class="accordion">
+									<div class="day">September 16, 2014</div>
+									<div class="item clearfix">
+										<div class="heading clearfix">
+											<div class="time col-md-3 col-sm-12 col-xs-12">14:00am - 16:00am</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Overview - Nisi elit consequat<br/><span class="name">Andrew Yang - </span><span class="speaker-designaition">CEO, Microsoft</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">16:00am - 17:00pm</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Aenean sollicitudin quis bibendum auctor<br/><span class="name">Andrew Yang - </span><span class="speaker-designaition">CEO, Microsoft</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">17:00pm - 18:00pm</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Catered Lunch<br/><span class="name">Sponsered </span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">18:00pm - 19:00pm</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Sagittis sem nibh id elit<br/><span class="name">Mary Doe - </span><span class="speaker-designaition">Lead Designer, Microsoft</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+
+
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">20:00pm - </div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Sagittis sem nibh id elit<br/><span class="name">Mary Doe - </span><span class="speaker-designaition">Lead Designer, Microsoft</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+
+
+								</div>        
+							</div>
+						</section>
+						<section class="hide" id="section-3">
+							<div class="container">
+								<div class="accordion">
+									<div class="day">September 17, 2014</div>
+									<div class="item clearfix">
+										<div class="heading clearfix">
+											<div class="time col-md-3 col-sm-12 col-xs-12">9:30am - 11:30am</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Welcome speech and Overview<br/><span class="name">Andrew Yang - </span><span class="speaker-designaition">CEO, Microsoft</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">11:30am - 1:00pm</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">The Standardistas are lecturers in interactive design<br/><span class="name">Andrew Yang - </span><span class="speaker-designaition">CEO, Microsoft</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">1:00pm - 2:00pm</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Catered Lunch<br/><span class="name">Sponsered </span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">3:00pm - 4:30pm</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Proin gravida nibh vel velit auctor aliquet<br/><span class="name">Mary Doe - </span><span class="speaker-designaition">Lead Designer, Microsoft</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								</div>        
+							</div>
+						</section>
+						<section  class="hide" id="section-4">
+							<div class="container">
+								<div class="accordion">
+									<div class="day">September 18, 2014</div>
+									<div class="item clearfix">
+										<div class="heading clearfix">
+											<div class="time col-md-3 col-sm-12 col-xs-12">9:30am - 11:30am</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Overview - Nisi elit consequat<br/><span class="name">Andrew Yang - </span><span class="speaker-designaition">CEO, Microsoft</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">11:30am - 1:00pm</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Aenean sollicitudin quis bibendum auctor<br/><span class="name">Andrew Yang - </span><span class="speaker-designaition">CEO, Microsoft</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">1:00pm - 2:00pm</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Catered Lunch<br/><span class="name">Sponsered </span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">3:00pm - 4:30pm</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Sagittis sem nibh id elit<br/><span class="name">Mary Doe - </span><span class="speaker-designaition">Lead Designer, Microsoft</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								</div>        
+							</div>   
+						</section>
+						<section class="hide" id="section-5">
+							<div class="container">
+								<div class="accordion">
+									<div class="day">September 19, 2014</div>
+									<div class="item clearfix">
+										<div class="heading clearfix">
+											<div class="time col-md-3 col-sm-12 col-xs-12">9:30am - 11:30am</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Welcome speech and Overview<br/><span class="name">Andrew Yang - </span><span class="speaker-designaition">CEO, Microsoft</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">11:30am - 1:00pm</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">The Standardistas are lecturers in interactive design<br/><span class="name">Andrew Yang - </span><span class="speaker-designaition">CEO, Microsoft</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">1:00pm - 2:00pm</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Catered Lunch<br/><span class="name">Sponsered </span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								  
+									<div class="item clearfix">
+										<div class="heading">
+											<div class="time col-md-3 col-sm-12 col-xs-12">3:00pm - 4:30pm</div>
+											<div class="e-title col-md-9 col-sm-12 col-xs-12">Proin gravida nibh vel velit auctor aliquet<br/><span class="name">Mary Doe - </span><span class="speaker-designaition">Lead Designer, Microsoft</span></div>
+										</div>
+										<div class="col-md-12 col-sm-12 col-xs-12">
+											<div class="content venue col-md-3 col-sm-12 col-xs-12">
+												Venue: Auditorium 1
+											</div>
+											<div class="content details col-md-9 col-sm-12 col-xs-12">
+											This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. The Standardistas are lecturers in interactive design.
+											</div>
+										</div>
+									</div>
+								</div>        
+							</div>
+						</section>
+					</div><!-- /content -->
+				</div><!-- /tabs -->
+			</div>
+        </section>
 		
+		
+		<!-- Event social links and download-->
+		<section class="event-download-social-link section-padding">
+			<div class="col-lg-6 col-md-12 align-center">
+				<a class="d-sch text-right" href="#" target="_blank">DESCARGA EL PROGRAMA EN PDF</a>
+				<a class="fb " href="https://www.facebook.com/events/514490228759687/" target="_blank">CONFIRMA TU ASISTENCIA EN FACEBOOK</a>
+			</div>
+		</section>
+		
+		<!--/SCHEDULE-->
 
-    </section>
-		<!-- /CONTACT -->	
 
 
 
 
 
 
-		 <!--REGISTER FORM-->	
+
+
+
+
+
+        
+        <!--Artists-->
+        <section class="team text-center section-padding" id="team">
+			<div class="container">
+				<div class="row">
+				  <div class="col-lg-8 wow animated fadeInUp align-center" data-wow-duration="1s" data-wow-delay="1s">
+					<h1 class="arrow">Los Speakers</h1><hr>
+					<p>Un evento para emprendedores reales, rebeldes, desadaptados y hambrientos.</p>
+				  </div>
+
+
+				  					<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+											  <img src="assets/img/team/1.png" alt="Portfolio Item">
+											  <div class="overlay">
+												<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+											  </div>
+											</div>
+										</div>
+										<h2>@YorshDePolanco</h2>
+										<p>Fundador de Apache Brands.</p>
+
+										<br>
+										<br>
+
+									</div>
+
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+												<img src="assets/img/team/2.png" alt="Portfolio Item">
+												<div class="overlay">
+													<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+												</div>
+											</div>
+										</div>
+										<h2>@DiegoStommel</h2>
+										<p>Fundador de Zoé Water. Manager de Haku.</p>
+
+										<br>
+										<br>
+
+									</div>
+
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+												<img src="assets/img/team/3.png" alt="Portfolio Item">
+												<div class="overlay">
+													<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+												</div>
+											</div>
+										</div>
+										<h2>@Sixpackmental</h2>
+										<p>Fundador de Six Pack Mental.</p>
+
+										<br>
+										<br>
+									</div>
+
+
+
+				</div>
+
+				<div class="row">
+					
+
+
+
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+											  <img src="assets/img/team/4.png" alt="Portfolio Item">
+											  <div class="overlay">
+												<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+											  </div>
+											</div>
+										</div>
+										<h2>@Efectowow</h2>
+										<p>Fundadora y autora del libro El Efecto WOW.</p>
+										<br>
+										<br>
+									</div>
+
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+												<img src="assets/img/team/5.png" alt="Portfolio Item">
+												<div class="overlay">
+													<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+												</div>
+											</div>
+										</div>
+										<h2>@MiGranSocio</h2>
+										<p>Fundador de Mi Gran Socio.</p>
+										<br>
+										<br>
+									</div>
+
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+												<img src="assets/img/team/6.png" alt="Portfolio Item">
+												<div class="overlay">
+													<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+												</div>
+											</div>
+										</div>
+										<h2>Invitado Especial</h2>
+										<p>Speaker invitado de Discovery Chanel.</p>
+										<br>
+										<br>
+									</div>
+
+
+				</div>
+
+
+				<div class="row hide">
+					<div class="speakers-wrap">
+
+
+						<div id="portfolioSlider">
+							
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+											  <img src="assets/img/team/1.png" alt="Portfolio Item">
+											  <div class="overlay">
+												<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+											  </div>
+											</div>
+										</div>
+										<h2>@YorshDePolanco</h2>
+										<p>Fundador de Apache Brands.</p>
+
+										<br>
+										<br>
+
+									</div>
+
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+												<img src="assets/img/team/2.png" alt="Portfolio Item">
+												<div class="overlay">
+													<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+												</div>
+											</div>
+										</div>
+										<h2>@DiegoStommel</h2>
+										<p>Fundador de Zoé Water. Manager de Haku.</p>
+
+										<br>
+										<br>
+
+									</div>
+
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+												<img src="assets/img/team/3.png" alt="Portfolio Item">
+												<div class="overlay">
+													<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+												</div>
+											</div>
+										</div>
+										<h2>@Sixpackmental</h2>
+										<p>Fundador de Six Pack Mental.</p>
+
+										<br>
+										<br>
+									</div>
+
+
+								</li>
+								<!-- <li> Second Set of Speakers -->
+								<li class="hide">
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp">
+										<div class="overlay-effect effects clearfix">
+										<div class="img">
+										  <img src="assets/img/team/team1.jpg" alt="Portfolio Item">
+										  <div class="overlay">
+											<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+										  </div>
+										</div>
+										</div>
+										<h2>Mark Anderson</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.</p>
+									</div>
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+											  <img src="assets/img/team/team2.jpg" alt="Portfolio Item">
+											  <div class="overlay">
+												<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+											  </div>
+											</div>
+										</div>
+										<h2>Jack Doe</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.</p>
+									</div>
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+											  <img src="assets/img/team/team3.jpg" alt="Portfolio Item">
+											  <div class="overlay">
+												<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+											  </div>
+											</div>
+										</div>
+									  <h2>John Thomson</h2>
+									  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.</p>
+									</div>
+
+
+								</li>
+								
+						</div>
+
+
+
+
+
+
+
+
+						<div id="portfolioSlider ">
+
+
+
+							
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+											  <img src="assets/img/team/4.png" alt="Portfolio Item">
+											  <div class="overlay">
+												<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+											  </div>
+											</div>
+										</div>
+										<h2>@Efectowow</h2>
+										<p>Fundadora y autora del libro El Efecto WOW.</p>
+										<br>
+										<br>
+									</div>
+
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.7s">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+												<img src="assets/img/team/5.png" alt="Portfolio Item">
+												<div class="overlay">
+													<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+												</div>
+											</div>
+										</div>
+										<h2>@MiGranSocio</h2>
+										<p>Fundador de Mi Gran Socio.</p>
+										<br>
+										<br>
+									</div>
+
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp" data-wow-duration="1s" data-wow-delay="0.9s">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+												<img src="assets/img/team/6.png" alt="Portfolio Item">
+												<div class="overlay">
+													<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+												</div>
+											</div>
+										</div>
+										<h2>Invitado Especial</h2>
+										<p>Speaker invitado de Discovery Chanel.</p>
+										<br>
+										<br>
+									</div>
+								
+								<!-- <li> Second Set of Speakers -->
+								<li class="hide">
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp">
+										<div class="overlay-effect effects clearfix">
+										<div class="img">
+										  <img src="assets/img/team/team1.jpg" alt="Portfolio Item">
+										  <div class="overlay">
+											<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+										  </div>
+										</div>
+										</div>
+										<h2>Mark Anderson</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.</p>
+									</div>
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+											  <img src="assets/img/team/team2.jpg" alt="Portfolio Item">
+											  <div class="overlay">
+												<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+											  </div>
+											</div>
+										</div>
+										<h2>Jack Doe</h2>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.</p>
+									</div>
+									<div class="col-md-4 col-sm-4 wow animated fadeInUp">
+										<div class="overlay-effect effects clearfix">
+											<div class="img">
+											  <img src="assets/img/team/team3.jpg" alt="Portfolio Item">
+											  <div class="overlay">
+												<button class="md-trigger expand" data-modal="modal-9"><i class="fa fa-search"></i><br>View More</button>
+											  </div>
+											</div>
+										</div>
+									  <h2>John Thomson</h2>
+									  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricies nulla non metus pulvinar imperdiet.</p>
+									</div>
+								</li>
+
+						</div>
+
+
+
+
+					</div>
+				</div> <!--Row Ends Here-->
+
+
+
+			</div>
+			<!-- Example Speaker -->
+
+
+
+
+
+			<div class="md-modal md-effect-9" id="modal-9">
+				<div class="md-content">
+					<div class="folio">
+						<div class="avatar"></div>
+						<div class="sp-name"><strong>Mark Anderson</strong></div>
+						<div class="sp-dsc">
+						This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor.
+							<blockquote>
+							<p>Here is a long quotation here is a long quotation proin gravida nibh vel velit auctor aliquet aenean sollicitudin.</p>
+							</blockquote>
+						This is Photoshop's version  of Lorem Ipsum. Proin gravida nibh vel velit auctor aliquet.
+						</div>
+						<div class="sp-social">
+							<ul>
+								<li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#" class="social-btn"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#" class="social-btn"><i class="fa fa-dribbble"></i></a></li>
+							
+							</ul>
+						</div>
+						<button class="md-close"><i class="fa fa-times"></i></button>
+					</div>
+				</div>
+			</div> 
+
+
+			<div class="md-overlay"></div>
+
+			<!-- /Example Speaker -->
+        </section>
+		<!--/SPEAKER-->
+		
+		 <!--TICKETS-->        
+		<section id="portfolio" class="portfolio text-center section-padding">
+			<div class="container">
+				<div class="row">
+				  <div class="col-md-12">
+					<h1 class="arrow">Completa tu registro aquí</h1><hr><p>Si ya compraste tu boleto es momento de terminar tu registro. Bienvenido </p>
+				  </div>
+				</div>
+				<div class="row">
+					<div class="pricing-wrap">                
+						<ul class="slides hide">
+							<li>
+								<div class="col-md-3 col-sm-6 col-xs-6 wow animated fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
+									<ul class="planContainer">
+										<li class="title"><h2>$99</h2></li>
+										<li class="price"><p>General</p></li>
+										<li>
+											<ul class="options">
+												<li>2x option 1</li>
+												<li>Free option 2</li>
+												<li>Unlimited option 3</li>
+												<li>Unlimited option 4</li>
+												<li>1x option 5</li>
+										   </ul>
+										</li>
+										<li class="button"><a data-scroll class="btn-effect" href="#swag">Book Now</a></li>
+									</ul>             
+								</div>
+							  
+								<div class="col-md-3 col-sm-6 col-xs-6 wow animated fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
+									<ul class="planContainer">
+										<li class="title"><h2 class="bestPlanTitle">$125</h2></li>
+										<li class="price"><p class="bestPlanPrice">VIP</p></li>
+										<li>
+											<ul class="options">
+												<li>2x option 1</li>
+												<li>Free option 2</li>
+												<li>Unlimited option 3</li>
+												<li>Unlimited option 4</li>
+												<li>1x option 5</li>
+											</ul>
+										</li>
+										<li class="button"><a data-scroll class="bestPlanButton btn-effect" href="#swag">Book Now</a></li>
+									</ul>
+								</div>
+								
+								<div class="col-md-3 col-sm-6 col-xs-6 wow animated fadeInRight" data-wow-duration="1s" data-wow-delay="0.7s">
+									<ul class="planContainer">
+										<li class="title"><h2>$100</h2></li>
+										<li class="price"><p>SUPER VIP</p></li>
+										<li>
+											<ul class="options">
+												<li>2x option 1</li>
+												<li>Free option 2</li>
+												<li>Unlimited option 3</li>
+												<li>Unlimited option 4</li>
+												<li>1x option 5</li>
+										   </ul>
+										</li>
+										<li class="button"><a data-scroll class="btn-effect " href="#swag">Book Now</a></li>
+									</ul>
+								</div>
+								<div class="col-md-3 col-sm-6 col-xs-6 wow animated fadeInRight" data-wow-duration="1s" data-wow-delay="0.9s">
+									<ul class="planContainer">
+										<li class="title"><h2>$150</h2></li>
+										<li class="price"><p>GROUP</p></li>
+										<li>
+											<ul class="options">
+												<li>2x option 1</li>
+												<li>Free option 2</li>
+												<li>Unlimited option 3</li>
+												<li>Unlimited option 4</li>
+												<li>1x option 5</li>
+										   </ul>
+										</li>
+										<li class="button"><a data-scroll class="btn-effect " href="#swag">Book Now</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>                
+					</div>
+				</div>
+			</div>
+        </section>
+		<!--/PRICING-->
+        
+        <!--REGISTER FORM-->	
         <section id="swag" class="swag text-center">
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-9 align-center">
-
-					<br>
-
-					<a><img src="assets/img/registro.svg" width="10%
-					"></a>
-
-					<h1 class="arrow">Completa tu registro</h1>
-
 						<form id="nl-form" class="nl-form ">
-							Hola mi nombre es:
-							<input id="name" type="text" name="name" placeholder="Tu nombre" data-subline="Escribe tu nombre"/>
+							Hola mi nombre es: 
+							<input id="name" type="text" name="name" placeholder=" Tu nombre completo" data-subline="Enter your name"/>
+							. Tengo <input id="name" type="text" name="name" placeholder=" __ años" data-subline="Enter your name"/>. Soy de: <input id="name" type="text" name="name" placeholder="Puebla, CDMX " data-subline="Enter your name"/>.
+							Ya he adquirido mi boleto en algún punto de venta y voy a terminar mi registro. Mi correo electrónico es:
+
+							<input id="name" type="text" name="name" placeholder=" tu@mail.com" data-subline="Enter your name"/>
 							.
-							Ya he adquirido mi boleto en algún punto de venta y voy a terminar mi registro. <br>
-							Mi correo electrónico es: 
+
+
+							El código de mi boleto es:
+
+							<input id="name" type="text" name="name" placeholder="00 000" data-subline="Enter your name"/>
+							.
+
+
 							
-							<input id="email1" type="text" name="email1" placeholder="tu@mail.com" data-subline="Escribe tu e mail"/> 
-							Nos vemos este 27 de Octubre. ¡Hasta pronto! 									
+							<br>
+
+							Nos vemos este 27 de Octubre. ¡Hasta pronto!
+
 							<div class="nl-submit-wrap">
-								<button class="nl-submit btn-effect" type="submit" id="submit_btn">Enviar:</button>
+								<button class="nl-submit btn-effect" type="submit" id="submit_btn">Enviar</button>
 							</div>				
 							<div id="result"></div>
 							<div class="nl-overlay"></div>
 						</form>
 
 							<div class="md-modal md-effect-9" id="modal-10">
-							<div class="md-content padding-none">
-								<div class="folio">
-									
-									<div class="sp-name disclaimer"><strong>Términos y condiciones</strong></div>
-									<div class="sp-dsc disclaim-border">
-									<ul>
-										<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt dolore magna aliqua.</li>
-										<li>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</li>
-										<li>Excepteur sint occaecat cupidatat non proident.</li>
-									</ul>
-									</div>
-									
-									<button class="md-close"><i class="fa fa-times"></i></button>
-								</div>
-							</div>
+							
 						</div> 
 						
 						<!-- the overlay element -->
@@ -1859,44 +1245,105 @@ CEO en Puebla de la idea que está transformando el transporte privado en el mun
         </section>
 		<!-- /REGISTER FORM -->
 
-
-
-
-
-
-		<!--FOOTER-->	
-		<footer>
+       <!--SPONSORS-->	
+        <div id="sponsers" class="ignite-cta text-center section-padding">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 align-center">
-						<ul class="legals">
+					<div class="col-md-8 align-center wow animated fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">
+						<h1 class="arrow">Sponsors</h1><hr>
+						<p>Gracias a todos por ser parte de esta experiencia.</p>
+					</div>
+					<!-- Jssor Slider Begin -->
+					<div id="slider1_container" style=" ">
+						<div class="inner_carousal" data-u="slides" style="">
+							<div><img alt="Odysseetrip" src="assets/img/sponsor/sp1.png" /></div>
+							<div><img alt="Parkimovil" src="assets/img/sponsor/sp2.png" /></div>
+							<div><img alt="Thinkers in Motion" src="assets/img/sponsor/sp3.png" /></div>
+							<div><img alt="Tecnológico de Monterrey" src="assets/img/sponsor/sp4.png" /></div>
+							<div><img alt="WM Producciones" src="assets/img/sponsor/sp5.png" /></div>
 							
-							<li><a><img src="assets/img/loco.png"></a></li>
+						</div>
+					</div>
+					<!-- Jssor Slider End -->
+				</div>
+			</div>
+		</div>
+		 <!-- /SPONSORS -->	
+
+		<!--SUBSCRIBE-->	
+        <section class="subscribe text-center">
+			<div class="subscribe-overlay"></div>
+			<div class="container wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.3s">
+				<h1>Suscríbete aquí y recibe noticias del evento</h1>
+				<form action="notify-me.php" id="notifyMe" method="POST" class="center-block align-center col-lg-5 col-md-5 col-sm-10 col-xs-10">
+					<div class="input-group col-lg-12 align-center">
+					  <input type="text" class="form-control email-add" name="email" placeholder="tu@mail.com">
+					  <button class="btn btn-default notify-button"><i class="fa fa-paper-plane"></i><span>Enviar</span></button>
+					</div>
+				</form>
+			</div>
+        </section>
+		<!-- /SUBSCRIBE -->
+
+		<!--CONTACT-->	
+        <section class="text-center section-padding contact-wrap" id="contact">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 wow animated fadeInLeft align-center" data-wow-duration="1s" data-wow-delay="0.3s">
+						<h1 class="arrow">Contacto</h1><hr>
+						
+					</div>
+				</div>
+				<div class="row contact-details">
+					<div class="col-md-4 wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
+						<div class="light-box box-hover">
+							<h2><span>La cita es:</span></h2>
+							<p><strong>27 de Octubre</strong><br> Tecnológico de Monterrey</p>
+						</div>
+					</div>
+					<div class="col-md-4 wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.7s">
+						<div class="light-box box-hover">
+							<h2><span>Teléfonos:</span></h2>
+							<p>(222) 183 6469<br><h2><span>Whats App</span></h2>(222) 310 6219</p>
+						</div>
+					</div>
+					<div class="col-md-4 wow animated fadeInDown" data-wow-duration="1s" data-wow-delay="0.9s">
+						<div class="light-box box-hover">
+							<h2><span>Email</span></h2>
+							<p><a href="#">ideaspartymx@gmail.com</a></p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<a id="get_directions" class="learn-more-btn btn-effect hide" href="#"><i class="fa fa-map-marker"></i><span>Get Directions</span></a>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<ul class="social-buttons">
+							
+							<li><a href="#" class="social-btn"><i class="fa fa-twitter"></i></a></li>
+							<li><a href="#" class="social-btn"><i class="fa fa-instagram"></i></a></li>
+							<li><a href="#" class="social-btn"><i class="fa fa-facebook"></i></a></li>
+							<li><a href="#" class="social-btn"><i class="fa fa-youtube"></i></a></li>
 						</ul>
 					</div>
-					<div class="md-modal md-effect-9" id="modal-11">
-						<div class="md-content padding-none">
-							<div class="folio">
-								<div class="sp-name disclaimer"><strong>Disclaimer</strong></div>
-								<div class="sp-dsc disclaim-border">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-									<br /><br />
-									Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-								</div>
-								<button class="md-close"><i class="fa fa-times"></i></button>
-							</div>
-						</div>
-					</div> 
-					<div class="md-overlay"></div>
+				</div>
+			</div>
+        </section>
+		<!-- /CONTACT -->	
+
+		<!--FOOTER-->	
+		<footer class="hide">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 align-center">
+						<a class="navbar-brand" data-scroll href="#sec_1"><img src="assets/img/logo.png" alt="logo"/></a>
+					</div>
+					
 				</div>
 			</div>
         </footer>
 		<!-- /FOOTER -->
-
-
-
-
-
 
 		<!--SCRIPTS-->	
 		
@@ -1950,48 +1397,6 @@ CEO en Puebla de la idea que está transformando el transporte privado en el mun
 		
 		<!-- INITIALIZATION  -->
 		<script type="text/javascript" src="assets/js/init.js"></script>
-
-		<script type="text/javascript" src="assets/js/jquery.countdown.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-
-		<script type="text/javascript" src="jquery.downCount.js"></script>
-
-
-		<script class="source" type="text/javascript">
-
-$('.countdown').downCount({
-
-<a href="http://www.jqueryscript.net/time-clock/">date</a>: '26/11/2015 12:00:00',
-
-offset: +10
-
-}, function () {
-
-alert('WOOT WOOT, done!');
-
-});
-
-</script>
-
-
-
-
-
-
-
 
     </body>
 </html>

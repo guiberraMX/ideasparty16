@@ -163,9 +163,6 @@ body {
 }
 }
 
-
-
-
 @media screen and (max-width: 992px) {
 
 
@@ -183,7 +180,7 @@ body {
 float: none;
 }
 .header.header-hide {
-	background: none repeat scroll 0 0 #01579B;
+	background: none repeat scroll 0 0 #0f1726;
 }
 .navbar-header {
 	float: none;
@@ -216,8 +213,7 @@ float: none;
 	padding:12px;
 }
 .navbar-brand img{
-	width:38%;
-
+	width:70%;
 }
 .navbar-default .navbar-toggle{
 	border:none;
@@ -228,11 +224,6 @@ float: none;
 }
 
 @media screen and (min-width:480px and max-width:991px){
-
-
-
-
-
 .wrapper {
 	background:#f3f5f8;
 	height:540px;
@@ -253,15 +244,12 @@ display:none;
 
 @media screen and (max-width: 800px) {
 
-
-
-
 #example-navbar-collapse{
 	float:none;
 }
 
 .header.header-hide {
-    background: none repeat scroll 0 0 #01579B;
+    background: none repeat scroll 0 0 #0c040f;
 }
 
 /* Schedule social links*/
@@ -322,7 +310,7 @@ display:none;
 }
 
 .social-btn i {
-    font-size: 2em;
+    font-size: 1em;
 }
 .social-btn {
 
@@ -357,7 +345,7 @@ display:none;
     margin: 0.5em 0;
 }
 .social-btn i {
-    font-size: 2em;
+    font-size: 1.1em;
 }
 #slider1_container{
 width: 100%!important;
@@ -521,7 +509,6 @@ body {
     font-size: 2.7em;
 }
 h1.arrow{
-    margin-top: 1em !important;
 	font-size:1.85em;
 }
 .slideshow figcaption{
@@ -556,7 +543,7 @@ h1.arrow{
     background-size: 100%;
 }
 .social-btn i {
-    font-size: 2em;
+    font-size: 1.3em;
 }
 
 .md-content{
