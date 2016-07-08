@@ -39,7 +39,7 @@ html{
 } 
 body {
 	color: #7a7a7a;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 14px;
 	font-style: normal;
 	line-height:1.5;
@@ -296,7 +296,7 @@ hr {
 
 .landing-text-pos h1{
 
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 	font-size: 3.5em;
     font-weight: 700;
     letter-spacing: 0.2em;
@@ -371,7 +371,7 @@ hr {
 
 .navbar-default .navbar-brand {
 	color: #fff;
-	font-family: raleway;
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 1em;
 	font-weight: 500;
 	letter-spacing: 0.2em;
@@ -380,7 +380,7 @@ hr {
 
 .navbar-default .navbar-nav > li > a {
 	color: #fff;
-	 font-family: 'Oswald',sans-serif;
+	 font-family: 'Ubuntu', sans-serif;
 	font-size: 1em;
 	font-weight: 500;
 	letter-spacing: 0.2em;
@@ -454,7 +454,7 @@ hr {
 }
 
 h1.arrow {
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	color: #fff;
     font-size: 2.5em;
     font-weight: 700;
@@ -467,7 +467,7 @@ h1.arrow {
 }
 
 .icon {
-	font-family: 'Oswald',sans-serif;
+	font-family: 'Ubuntu', sans-serif;
 	display: block;
 	color: #ff1d8d;
 	font-size: 5em;
@@ -1040,7 +1040,7 @@ div.avatar {
 
 .swag h1 {
 	color: #fff;
-	font-family: 'Raleway';
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 50px;
 }
 
@@ -1452,7 +1452,7 @@ a {
 	background-color: #141115;
     color: #ffffff;
     font-size: 3em;
-	font-family: 'Oswald',sans-serif;
+	font-family: 'Ubuntu', sans-serif;
     font-weight: 600;
     margin: 0;
     padding: 0.6em 0;
@@ -1465,7 +1465,7 @@ a {
 
 .planContainer .price p {
 	background: none repeat scroll 0 0 #141115;
-	font-family: 'Oswald',sans-serif;
+	font-family: 'Ubuntu', sans-serif;
     color: #fff;
     font-size: 1.2em;
     font-weight: 500;
