@@ -106,8 +106,8 @@ h6 {
 
 p {
 	color: #fff;
-    font-size: 1.1em;
-    line-height: 1.6em;
+    font-size: 2em;
+    line-height: 1.3em;
 }
 
 .bottom-spacing{
@@ -177,7 +177,7 @@ p {
 }
 
 .event-download-social-link{
-	background:#0c040f;
+	background:#282b35;
 }
 
 .nopadding {
@@ -313,6 +313,8 @@ hr {
     text-transform: uppercase;
 }
 
+
+
 .learn-more-btn{
 	background: none repeat scroll 0 0 rgba(27, 206, 124, 1);
     color: #363738;
@@ -320,11 +322,13 @@ hr {
     font-size: 1em;
     font-weight: 600;
     letter-spacing: 0.2em;
-    margin: 2.9em auto 0;
+    margin: 2em auto 0;
     padding: 15px;
     text-transform: uppercase;
-    width: 200px;
+    width: 300px;
 }
+
+
 
 .align-center {
 	margin: 0 auto;
@@ -355,7 +359,7 @@ hr {
 }
 
 .scroll-header {
-	background: none repeat scroll 0 0 #0c040f;
+	background: none repeat scroll 0 0 #212121;
 }
 
 #example-navbar-collapse {
@@ -456,9 +460,10 @@ hr {
 h1.arrow {
 	font-family: 'Ubuntu', sans-serif;
 	color: #fff;
-    font-size: 2.5em;
+    font-size: 4em;
     font-weight: 700;
-    letter-spacing: 0.3em;
+    letter-spacing: -0.06em;
+
     text-transform: uppercase;
 }
 
@@ -469,7 +474,7 @@ h1.arrow {
 .icon {
 	font-family: 'Ubuntu', sans-serif;
 	display: block;
-	color: #ff1d8d;
+	color: #f57f17;
 	font-size: 5em;
 	text-align: center;
 	vertical-align: middle;
@@ -524,7 +529,7 @@ h1.arrow {
 /****************************/
 
 figure.vimeo-video{
-	 background: url("../img/video.jpg") no-repeat scroll center center / cover rgba(0, 0, 0, 0);
+	 background: url("../img/gallery/gallery2.jpg") no-repeat scroll center center / cover rgba(0, 0, 0, 0);
 }
 
 
@@ -545,7 +550,7 @@ figure.vimeo-video{
 }
 
 .block-hover:hover {
-	background:none repeat scroll 0 0 rgb(12, 89, 216);
+	background: url("../img/gallery/gallery.jpg") no-repeat scroll center center / cover rgba(0, 0, 0, 0);
 	-webkit-transition: all .6s ;
 	-moz-transition: all .6s ;
 	-o-transition: all .6s ;
@@ -598,7 +603,7 @@ figure.vimeo-video{
     top: 10px;
 }
 .team {
-	background-color: #141115;
+	background: url(../img/bg2.jpg);
 }
 
 .speakers-wrap {
@@ -663,10 +668,10 @@ blockquote p{
 }
 
 .team h2 {
-	color: #0c59d8;
-    font-size: 1.2em;
+	color: #fff;
+    font-size: 1.9em;
     font-weight: 600;
-    letter-spacing: 0.2em;
+    letter-spacing: -0.05em;
     margin: 0.83em 0;
     text-transform: uppercase;
 }
@@ -936,7 +941,7 @@ div.avatar {
 
 
 .accordion .item .heading .time {
-	border-top: 4px solid #ff1d8d;
+	border-top: 4px solid #f57f17;
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
@@ -1011,10 +1016,10 @@ div.avatar {
 }
 
 .d-sch:hover{
-	color: #0c59d8;
+	color: #596070;
 }
 .fb:hover{
-	color: #0c59d8;
+	color: #596070;
 }
 
 .accordion .item.open .e-title {
@@ -1548,7 +1553,7 @@ ul.planContainer li.title {
 	display: block;
 	position: absolute;
 	z-index: 20;
-	background: rgba(12, 89, 216, 1);
+	background: rgba(12, 89, 216, 0);
 	overflow: hidden;
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -1620,7 +1625,7 @@ button.expand {
 
 .img img {
 	width: -webkit-calc(100% + 40px) !important;
-	width: calc(100% + 40px) !important;
+	width: calc(100% - 50px) !important;
 	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
 	transition: opacity 0.35s, transform 0.35s;
 	-moz-transition: opacity 0.35s, -moz-transform 0.35s;
@@ -1653,7 +1658,7 @@ ul.slides li {
 /** Sponsor **/
 /*****************************/
 .ignite-cta {
-	background-color: #0c040f;
+	background-color: #596070;
 }
 
 .ignite-btn {
@@ -1798,8 +1803,8 @@ ul.planContainer {
 	background: none;
     border: medium none;
     border-radius: 0;
-    color: #0e45a2;
-    font-size: 16px;
+    color: #fff;
+    font-size: 19px;
     font-weight: 600;
     height: 35px;
     letter-spacing: 6px;
@@ -1830,7 +1835,7 @@ ul.planContainer {
 
 	background:none;
 	border: none;
-	color: #0c59d8;
+	color: #fff;
 
 }
 
@@ -1838,7 +1843,7 @@ ul.planContainer {
 	outline:0 none;
 	border:0 none;
 	background:none;
-	color: #0c59d8;
+	color: #fff;
 }
 
 .subscribe button span {
@@ -1986,7 +1991,7 @@ ul.planContainer {
 }
 
 .contact-details h2 span {
-	color: #0c59d8;
+	color: #fff;
     display: block;
     font-size: 0.8em;
     font-weight: 600;
@@ -1996,7 +2001,7 @@ ul.planContainer {
 }
 
 .contact-wrap {
-	background-color: #0c040f;
+	background-color: #3a3e4c;
 	position: relative;
 }
 
@@ -2020,16 +2025,16 @@ ul.planContainer {
 }
 
 .light-box {
-	-webkit-box-shadow: 0px -1px 0px 0px #ff1d8d;
-	-moz-box-shadow: 0px -1px 0px 0px #ff1d8d;
-	box-shadow: 0px -1px 0px 0px #ff1d8d;
+	-webkit-box-shadow: 0px -1px 0px 0px #f57f17;
+	-moz-box-shadow: 0px -1px 0px 0px #f57f17;
+	box-shadow: 0px -1px 0px 0px #f57f17;
 	padding: 20px 0;
 }
 
 .light-box:hover, .light-box:focus {
-	-webkit-box-shadow: 0px 5px 0px 0px #ff1d8d;
-	-moz-box-shadow: 0px 5px 0px 0px #ff1d8d;
-	box-shadow: 0px 5px 0px 0px #ff1d8d;
+	-webkit-box-shadow: 0px 5px 0px 0px #f57f17;
+	-moz-box-shadow: 0px 5px 0px 0px #f57f17;
+	box-shadow: 0px 5px 0px 0px #f57f17;
 }
 
 .box-hover {
@@ -2115,10 +2120,31 @@ ul.legals li:last-child::after {
 }
 
 .ey{
-	margin-right: 40px !important;
+	margin-right: 20px !important;
+	color: #fff !important;
 }
 
 
 .cta{
 	margin-bottom: 70px !important;
 }
+
+.superboletos{
+	padding: 15px !important;
+}
+
+.botoncito{
+	background-color: #558b2f !important;
+	padding: 16px !important;
+	padding-right: 20px !important;
+	color: #fff !important;
+}
+
+.roj{
+	background-color: #282b35 !important;
+}
+
+.grisy{
+	background-color: #282b35 !important;
+}
+
