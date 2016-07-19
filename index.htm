@@ -1,206 +1,230 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns="http://www.w3.org/1999/html">
 
-    
 
 <head>
 
-	<!-- Basic Page Needs
+    <!-- Basic Page Needs
   ================================================== -->
-	<meta charset="utf-8">
-	<title>Idas Party</title>
-	<meta name="description" content="Boutique creativa en medios">
-	<meta name="author" content="guiberraMX">
+    <meta charset="utf-8">
+    <title>Idas Party</title>
+    <meta name="description" content="Boutique creativa en medios">
+    <meta name="author" content="guiberraMX">
 
-	<!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
   ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-	<!-- CSS
+    <!-- CSS
   ================================================== -->
-  	<link rel="stylesheet" href="css/reset.css" media="all">
+    <link rel="stylesheet" href="css/reset.css" media="all">
     <link rel="stylesheet" href="css/ut-fontface.css" media="all">
     <link rel="stylesheet" href="css/font-awesome.css" media="all">
-	<link rel="stylesheet" href="css/flexslider.css" media="all">
+
+    <link rel="stylesheet" href="css/flexslider.css" media="all">
     <link rel="stylesheet" href="css/magnific-popup.css" media="all">
     <link rel="stylesheet" href="css/ut-responsive-grid.css" media="all">
     <link rel="stylesheet" href="css/color.css" media="all">
     <link rel="stylesheet" href="css/style.css" media="all">
-    
-     <!--[if lt IE 9]>
-		<script src="js/html5.js"></script>
-	<![endif]-->
-    
-   <!--[if lt IE 9]>
-	<link rel="stylesheet" type="text/css" href="ie8-and-down.css" />
-	<style>.hero .hero-holder {
-		margin-left:-410px;
-	}
-	</style>
-    <![endif]-->
-    
-    <!--[if IE]>
-		<link rel="stylesheet" type="text/css" href="css/ie.css" />
-	<![endif]-->
+    <link rel="stylesheet" href="/jquery-ui/themes/base/jquery-ui.css" media="all">
+    <link rel="stylesheet" href="/jquery-ui/themes/base/theme.css" media="all">
 
-	<!-- Favicons
-	================================================== -->
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="ie8-and-down.css"/>
+    <style>.hero .hero-holder {
+        margin-left: -410px;
+    }
+    </style>
+    <![endif]-->
+
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="css/ie.css"/>
+    <![endif]-->
+
+    <!-- Favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 
-	<!-- Load jQuery
-  	================================================== -->
-  	<script src="js/jquery.min.js"></script>
+    <!-- Load jQuery
+      ================================================== -->
+    <script src="js/jquery.min.js"></script>
     <script src="js/SmoothScroll.js"></script>
-	<script src="js/modernizr.js"></script>
+    <script src="js/modernizr.js"></script>
     <script src="js/device.min.js"></script>
-    
+
+
+    <style type="text/css">
+        .ui-autocomplete {
+            position: absolute;
+            cursor: default;
+            z-index: 9999 !important;
+            text-align: center;
+        }
+    </style>
+
 </head>
 
 <body id="mainsite ">
 
-	
-    <a id="top"></a>
-    
-	<!-- Page Layout
-	================================================== -->
-    
-     <!-- header section -->
-	<header id="header-section" class="ha-header ha-header-hide">
-    	<div class="grid-container">
-				<div class="ha-header-perspective">
-					<div class="ha-header-front">
-                    <div class="grid-20 tablet-grid-20 hide-on-mobile">
-						<h1 class="logo"><a href="#top"><img src="images/logo.gif" alt="logo"></a></h1>
-                        </div>
-						<nav id="ut-navigation" class="grid-80 tablet-grid-80 hide-on-mobile">
-                        	
-							<a href="#about-section">El Congreso</a>
-						
-							<a href="#service-section">El Programa</a>
-                            <a href="#portfolio-section">Los Speakers</a>
 
-                            <a href="#social-section">Registro</a>
-                           
-                            <a href="#c-section">Sponsors</a>
-						</nav>
-					</div>
-				</div><!-- close .ha-header-perspective --> 
-        </div><!-- close grid container -->  
-    </header><!-- close header -->
+<a id="top"></a>
 
-    <div class="clear"></div>
+<!-- Page Layout
+================================================== -->
 
-	<!-- hero section -->
-    <section  class=" snow hero ha-waypoint parallax-section parallax-background " data-animate-up="ha-header-hide" data-animate-down="ha-header-hide">
-
-    	
-        <a id="bgndVideo" class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=cID7LuywYf0',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1}">Ideas Party</a>
-        
-        <div class="parallax-overlay parallax-overlay-1"></div> 
-    	<div class="grid-container">
-    		
-            <!-- hero holder -->
-            <div class="hero-holder grid-70 mobile-grid-100 tablet-grid-100">
-            	<div class="hero-inner">
-                
-                    <h2 class="nuevotit"><span> 27 DE OCTUBRE</span> </h2> <br>
-            <h4 class"tecdem">TECNOLOGICO DE MONTERREY.</h4>  
-
-            <br>
-           
-            <a href="#social-section"><input id="send-btn" class=" botonzote " type="submit" name="send-btn" value="Termina tu registro"></a>
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            
-            <a class="entradaa"><strong>¿Aun no tienes tu entrada? <br> <br> </strong></a><a href="https://www.taquillacero.com/ideas-party-2016/centro-convenciones-tec-monterrey/2016/10/27" target="blank"><input id="send-btn" class="send-btn" type="submit" name="send-btn" value="Compra tu boleto"></a>                                             
-
-
+<!-- header section -->
+<header id="header-section" class="ha-header ha-header-hide">
+    <div class="grid-container">
+        <div class="ha-header-perspective">
+            <div class="ha-header-front">
+                <div class="grid-20 tablet-grid-20 hide-on-mobile">
+                    <h1 class="logo"><a href="#top"><img src="images/logo.gif" alt="logo"></a></h1>
                 </div>
-            </div><!-- close hero-holder -->    													
-    	</div>
-    </section><!-- close hero section -->
-    
-    <div class="clear"></div>
-   
-    <div id="main-content" class="wrap">
-    
+                <nav id="ut-navigation" class="grid-80 tablet-grid-80 hide-on-mobile">
+
+                    <a href="#about-section">El Congreso</a>
+
+                    <a href="#service-section">El Programa</a>
+                    <a href="#portfolio-section">Los Speakers</a>
+
+                    <a href="#social-section">Registro</a>
+
+                    <a href="#c-section">Sponsors</a>
+                </nav>
+            </div>
+        </div><!-- close .ha-header-perspective -->
+    </div><!-- close grid container -->
+</header><!-- close header -->
+
+<div class="clear"></div>
+
+<!-- hero section -->
+<section class=" snow hero ha-waypoint parallax-section parallax-background " data-animate-up="ha-header-hide"
+         data-animate-down="ha-header-hide">
+
+
+    <a id="bgndVideo" class="player"
+       data-property="{videoURL:'https://www.youtube.com/watch?v=cID7LuywYf0',containment:'body',autoPlay:true, mute:true, startAt:0, opacity:1}">Ideas
+        Party</a>
+
+    <div class="parallax-overlay parallax-overlay-1"></div>
+    <div class="grid-container">
+
+        <!-- hero holder -->
+        <div class="hero-holder grid-70 mobile-grid-100 tablet-grid-100">
+            <div class="hero-inner">
+
+                <h2 class="nuevotit"><span> 27 DE OCTUBRE</span></h2> <br>
+                <h4 class"tecdem">TECNOLOGICO DE MONTERREY.</h4>
+
+                <br>
+
+                <a href="#social-section"><input id="send-btn" class=" botonzote " type="submit" name="send-btn"
+                                                 value="Termina tu registro"></a>
+
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+
+                <a class="entradaa"><strong>¿Aun no tienes tu entrada? <br> <br> </strong></a><a
+                    href="https://www.taquillacero.com/ideas-party-2016/centro-convenciones-tec-monterrey/2016/10/27"
+                    target="blank"><input id="send-btn" class="send-btn" type="submit" name="send-btn"
+                                          value="Compra tu boleto"></a>
+
+
+            </div>
+        </div><!-- close hero-holder -->
+    </div>
+</section><!-- close hero section -->
+
+<div class="clear"></div>
+
+<div id="main-content" class="wrap">
+
     <!-- about section -->
     <div class="nav-waypoint">
-	<section id="about-section" class=" gris about-section content-section ha-waypoint" data-animate-up="ha-header-hide" data-animate-down="ha-header-small">
-		<div class="grid-container">
-        	
-            <!-- section header -->
-            <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
-                <header class="section-header">
-                    <h2 class="nuevotit"><span>UN CONCEPTO ÚNICO DE CONGRESO</span></h2>
-                    <p class="section-slogan">Es un congreso donde se reúnen jóvenes universitarios y público en general para convivir con empresarios y emprendedores, donde hablarán sobre historias de éxito locas e irreverentes, historias que han cambiado la manera cotidiana de hacer las cosas, entre otras experiencias. Todo esto en un ambiente de competitividad, networking y diversión.</p>
-                </header>
-            </div>
-            <!-- close section header -->
-            <div class="grid-50 tablet-grid-100 mobile-grid-100 about-box">
-            	                
-                <div class="about-box">
+        <section id="about-section" class=" gris about-section content-section ha-waypoint"
+                 data-animate-up="ha-header-hide" data-animate-down="ha-header-small">
+            <div class="grid-container">
 
-                    <img src="images/brain.png" width="40%">
-                    
-                    <p><strong>Así se vivió el último Ideas Party, <br> ¡No querrás perdértelo este año!</strong></p>
-                
-                </div>  
-
-            </div>
-
-            <div class="grid-50 tablet-grid-100 mobile-grid-100 about-box ">
-            	
-                <div class="about-box">
-
-               <iframe width="100%" height="315px" src="https://www.youtube.com/embed/9KyWKz9sYqU" frameborder="0" allowfullscreen></iframe>
-                   
-                </div>
-
-            </div>
-            
-            
-            
-    	</div><!-- close grid-container -->
-    </section>
-
-
-
-    <!-- close about 
-
-    <div class="clear"></div>
-
-     <section id="parallax-section-2" class=" snow parallax-section parallax-background parallax-section-2 ha-waypoint">
-     <div class="parallax-overlay parallax-overlay-2"></div>
-		<div class="grid-container parallax-content">
-           
-            	<div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
-                    <header class="parallax-header">
-                        
-                        <p class="parallax-slogan">"En los momentos de crisis, sólo la <strong>creatividad</strong> es más importante que el conocimiento."</p>
-
-                        <h2 class=""><span>Descarga la App</span></h2>
+                <!-- section header -->
+                <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                    <header class="section-header">
+                        <h2 class="nuevotit"><span>UN CONCEPTO ÚNICO DE CONGRESO</span></h2>
+                        <p class="section-slogan">Es un congreso donde se reúnen jóvenes universitarios y público en
+                            general para convivir con empresarios y emprendedores, donde hablarán sobre historias de
+                            éxito locas e irreverentes, historias que han cambiado la manera cotidiana de hacer las
+                            cosas, entre otras experiencias. Todo esto en un ambiente de competitividad, networking y
+                            diversión.</p>
                     </header>
                 </div>
-   
-		</div>
-	</section>
+                <!-- close section header -->
+                <div class="grid-50 tablet-grid-100 mobile-grid-100 about-box">
 
-   av-waypoint -->
+                    <div class="about-box">
 
-    
+                        <img src="images/brain.png" width="40%">
+
+                        <p><strong>Así se vivió el último Ideas Party, <br> ¡No querrás perdértelo este año!</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="grid-50 tablet-grid-100 mobile-grid-100 about-box ">
+
+                    <div class="about-box">
+
+                        <iframe width="100%" height="315px" src="https://www.youtube.com/embed/9KyWKz9sYqU"
+                                frameborder="0" allowfullscreen></iframe>
+
+                    </div>
+
+                </div>
+
+
+            </div><!-- close grid-container -->
+        </section>
+
+
+        <!-- close about
+
+        <div class="clear"></div>
+
+         <section id="parallax-section-2" class=" snow parallax-section parallax-background parallax-section-2 ha-waypoint">
+         <div class="parallax-overlay parallax-overlay-2"></div>
+            <div class="grid-container parallax-content">
+
+                    <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                        <header class="parallax-header">
+
+                            <p class="parallax-slogan">"En los momentos de crisis, sólo la <strong>creatividad</strong> es más importante que el conocimiento."</p>
+
+                            <h2 class=""><span>Descarga la App</span></h2>
+                        </header>
+                    </div>
+
+            </div>
+        </section>
+
+       av-waypoint -->
+
 
     </div>
-    
+
     <div class="clear"></div>
 
     <!-- team 
@@ -603,654 +627,687 @@
     </div>
 
      nav-waypoint -->
-         
-    <div class="clear"></div>    
-    
+
+    <div class="clear"></div>
+
     <!-- service section -->
     <div class="nav-waypoint">
-     <section id="service-section" class="snow gris parallax-section parallax-background service-section">
-     <div class="parallax-overlay parallax-overlay-3"></div>
-		<div class="grid-container parallax-content">
-        	<div class="grid-parent grid-100 mobile-grid-100 tablet-grid-100">
-            
-            <!-- entry header -->
-            <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
-            <header class="parallax-header">
+        <section id="service-section" class="snow gris parallax-section parallax-background service-section">
+            <div class="parallax-overlay parallax-overlay-3"></div>
+            <div class="grid-container parallax-content">
+                <div class="grid-parent grid-100 mobile-grid-100 tablet-grid-100">
 
-            <h2 class="nuevotit"><span>EL PROGRAMA</span></h2>
-                <br>
+                    <!-- entry header -->
+                    <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                        <header class="parallax-header">
 
-            <p class="parallax-slogan">Historias de éxito de quien creyó en su idea y retó a lo cotidiano; todo esto en un ambiente de música, competitividad y éxito.</p>
-
-
-                    <ul class="accordion css-accordion">
-
-                      <li class="accordion-item">
-                        <input class="accordion-item-input" type="checkbox" name="accordion" id="item1" />
-                        <label for="item1" class="accordion-item-hd">8:30 - 10:00 HRS. &nbsp;&nbsp;&nbsp;<strong>REGISTRO</strong><span class="accordion-item-hd-cta">&#9650;</span></label>
-                        <div class="accordion-item-bd">
-                        <p>Social Business, Acceso Centro de Convenciones Tecnológico de Monterrey.</p>
-                        </div>
-                      </li>
-
-
-                      <li class="accordion-item">
-                        <input class="accordion-item-input" type="checkbox" name="accordion" id="item2" />
-                        <label for="item2" class="accordion-item-hd">10:00 - 11:00 HRS. &nbsp;&nbsp;&nbsp; <strong>INAUGURACIÓN - HAPPENING</strong> <span class="accordion-item-hd-cta">&#9650;</span></label>
-                        <div class="accordion-item-bd">
-                            <p>Bienvenidos a Ideas Party - ft. Social Business</p>
-                        </div>
-                      </li>
-
-
-                      <li class="accordion-item">
-                        <input class="accordion-item-input" type="checkbox" name="accordion" id="item3" />
-                        <label for="item3" class="accordion-item-hd">11:00 - 12:00 HRS. &nbsp;&nbsp;&nbsp; <strong>UN CRACK COMIENZA EN LA MENTE </strong><span class="accordion-item-hd-cta">&#9650;</span></label>
-                        <div class="accordion-item-bd">
-
-                            <h4> <strong>Pepe Galván</strong>Fundador de Six Pack Mental. </h4>
+                            <h2 class="nuevotit"><span>EL PROGRAMA</span></h2>
                             <br>
-                            <p>Top Performance Coach deportivo para atletas nacionales e internacionales. Entrenamiento mental para mejorar el rendimiento de deportistas dentro y fuera de la cancha. Lleva la operación y logística de la Selección Mexicana de Futbol en USA. Consultor de la MLS. Logística para Copa América y eventos internacionales. Deportista, empresario y apasionado del futbol.</p>
-                        </div>
-                      </li>
+
+                            <p class="parallax-slogan">Historias de éxito de quien creyó en su idea y retó a lo
+                                cotidiano; todo esto en un ambiente de música, competitividad y éxito.</p>
 
 
-                      <li class="accordion-item">
-                        <input class="accordion-item-input" type="checkbox" name="accordion" id="item4" />
-                        <label for="item4" class="accordion-item-hd">12:00 - 13:00 HRS. &nbsp;&nbsp;&nbsp; <strong>EL EFECTO WOW, MI YO CREATIVO</strong> <span class="accordion-item-hd-cta">&#9650;</span></label>
-                        <div class="accordion-item-bd">
-                        <h4><strong>Mari Carmen Obregón</strong>Fundadora y autora del libro El Efecto WOW.</h4>
-                        <br>
-                        <p>
-                            De las 30 mujeres promesa en los negocios según la revista Forbes México. Speaker en Tedx Talks. Su conferencia ha sido escuchada en Frankfurt, Las Vegas, Miami, Nashville, Medellín, Bogotá, Cancún, Guadalajara, CDMX y más ciudades del mundo. Apasionada de la creatividad y las mariposas amarillas.
-                        </p>
-                        </div>
-                      </li>
+                            <ul class="accordion css-accordion">
 
-                      <li class="accordion-item">
-                        <input class="accordion-item-input" type="checkbox" name="accordion" id="item5" />
-                        <label for="item5" class="accordion-item-hd">13:00 - 14:00 HRS. &nbsp;&nbsp;&nbsp; <strong>APRENDIENDO SOBRE LA MARCHA</strong><span class="accordion-item-hd-cta">&#9650;</span></label>
-                        <div class="accordion-item-bd">
-                        <h4><strong>Diego Stommel</strong>Fundador de Zoé Water. Manager de Haku.</h4>
-                        <br>
-                        <p>Director de Hedley & Bennett México. Baterista de Allison, ganador de dos discos de oro y platino. Empresario, rockero, amante de las motos y los perros.</p>
-                        </div>
-                      </li>
-
-                      <li class="accordion-item">
-                        <input class="accordion-item-input" type="checkbox" name="accordion" id="item6" />
-                        <label for="item6" class="accordion-item-hd"> 14:00 - 16:00 HRS. &nbsp;&nbsp;&nbsp; BREAK - NETWORKING<span class="accordion-item-hd-cta">&#9650;</span></label>
-                        <div class="accordion-item-bd">
-                            
-                        </div>
-                      </li>
+                                <li class="accordion-item">
+                                    <input class="accordion-item-input" type="checkbox" name="accordion" id="item1"/>
+                                    <label for="item1" class="accordion-item-hd">8:30 - 10:00 HRS.
+                                        &nbsp;&nbsp;&nbsp;<strong>REGISTRO</strong><span class="accordion-item-hd-cta">&#9650;</span></label>
+                                    <div class="accordion-item-bd">
+                                        <p>Social Business, Acceso Centro de Convenciones Tecnológico de Monterrey.</p>
+                                    </div>
+                                </li>
 
 
-                      <li class="accordion-item">
-                        <input class="accordion-item-input" type="checkbox" name="accordion" id="item7" />
-                        <label for="item7" class="accordion-item-hd"> 16:00 - 17:00 HRS. &nbsp;&nbsp;&nbsp; TODOS PODEMOS HACER HISTORIA<span class="accordion-item-hd-cta">&#9650;</span></label>
-                        <div class="accordion-item-bd">
-                            <h4><strong>Pepe Ramírez</strong>Fundador de Mi Gran Socio.</h4>
-                            <br>
-                            <p>Creativo de campañas para Tequila Cuervo Tradicional, J&B, Start Media, Explora México, Mercedes Benz, MVS Multivision, Corona entre otros. Fundador de una de las primeras agencias de modelaje en CDMX haciendo pasarelas para Versace. Empresario intenso y amante de las grandes ideas.</p>
-                        </div>
-                      </li>
+                                <li class="accordion-item">
+                                    <input class="accordion-item-input" type="checkbox" name="accordion" id="item2"/>
+                                    <label for="item2" class="accordion-item-hd">10:00 - 11:00 HRS. &nbsp;&nbsp;&nbsp;
+                                        <strong>INAUGURACIÓN - HAPPENING</strong> <span class="accordion-item-hd-cta">&#9650;</span></label>
+                                    <div class="accordion-item-bd">
+                                        <p>Bienvenidos a Ideas Party - ft. Social Business</p>
+                                    </div>
+                                </li>
 
 
-                      <li class="accordion-item">
-                        <input class="accordion-item-input" type="checkbox" name="accordion" id="item8" />
-                        <label for="item8" class="accordion-item-hd">17:00 - 18:00 HRS. &nbsp;&nbsp;&nbsp; <strong>PLATICA SORPRESA</strong> <span class="accordion-item-hd-cta">&#9650;</span></label>
-                        <div class="accordion-item-bd">
-                            <p>Invitado Especial - Discovery Chanel</p>
-                        </div>
-                      </li>
+                                <li class="accordion-item">
+                                    <input class="accordion-item-input" type="checkbox" name="accordion" id="item3"/>
+                                    <label for="item3" class="accordion-item-hd">11:00 - 12:00 HRS. &nbsp;&nbsp;&nbsp;
+                                        <strong>UN CRACK COMIENZA EN LA MENTE </strong><span
+                                                class="accordion-item-hd-cta">&#9650;</span></label>
+                                    <div class="accordion-item-bd">
 
-                      <li class="accordion-item">
-                        <input class="accordion-item-input" type="checkbox" name="accordion" id="item9" />
-                        <label for="item9" class="accordion-item-hd">18:00 - 19:00 HRS.  &nbsp;&nbsp;&nbsp; <strong>HAZLA DE PEDO, DEJA HUELLA</strong> <span class="accordion-item-hd-cta">&#9650;</span></label>
-                        <div class="accordion-item-bd">
-                        <h4><strong>Jorge Gómez Pimienta (Yorsh de Polanco)<br></strong>Fundador de Apache Brands.</h4>
-                        <br>
-                        <p>Nominado por MTV como fenómeno viral del año. Su imagen es patrocinada por Pepsi, Heineken, TV Azteza, Jeep, Head & Shoulders, Sport City, Marti. 18 años de experiencia en marketing trabajando para Coca-Cola y PepsiCo. Filántropo, empresario, deportista y amante de los perros y la naturaleza.</p>
-                        </div>
-                      </li>
-
-                      <li class="accordion-item">
-                        <input class="accordion-item-input" type="checkbox" name="accordion" id="item10" />
-                        <label for="item10" class="accordion-item-hd">19:00 - 20:00 HRS. &nbsp;&nbsp;&nbsp; <strong>CLAUSURA</strong> <span class="accordion-item-hd-cta">&#9650;</span></label>
-                        <div class="accordion-item-bd"> <p>Ideas Party - ft. Social Business</p> </div>
-                      </li>
-
-                      <li class="accordion-item">
-                        <input class="accordion-item-input" type="checkbox" name="accordion" id="item11" />
-                        <label for="item11" class="accordion-item-hd"> 20:00 HRS. &nbsp;&nbsp;&nbsp; <strong>FIESTA DE CLAUSURA</strong> <span class="accordion-item-hd-cta">&#9650;</span></label>
-                        <div class="accordion-item-bd"> <p>Lugar por confirmar.</p></div>
-                      </li>
-
-                    </ul>
+                                        <h4><strong>Pepe Galván</strong>Fundador de Six Pack Mental. </h4>
+                                        <br>
+                                        <p>Top Performance Coach deportivo para atletas nacionales e internacionales.
+                                            Entrenamiento mental para mejorar el rendimiento de deportistas dentro y
+                                            fuera de la cancha. Lleva la operación y logística de la Selección Mexicana
+                                            de Futbol en USA. Consultor de la MLS. Logística para Copa América y eventos
+                                            internacionales. Deportista, empresario y apasionado del futbol.</p>
+                                    </div>
+                                </li>
 
 
-  <!-- close en
+                                <li class="accordion-item">
+                                    <input class="accordion-item-input" type="checkbox" name="accordion" id="item4"/>
+                                    <label for="item4" class="accordion-item-hd">12:00 - 13:00 HRS. &nbsp;&nbsp;&nbsp;
+                                        <strong>EL EFECTO WOW, MI YO CREATIVO</strong> <span
+                                                class="accordion-item-hd-cta">&#9650;</span></label>
+                                    <div class="accordion-item-bd">
+                                        <h4><strong>Mari Carmen Obregón</strong>Fundadora y autora del libro El Efecto
+                                            WOW.</h4>
+                                        <br>
+                                        <p>
+                                            De las 30 mujeres promesa en los negocios según la revista Forbes México.
+                                            Speaker en Tedx Talks. Su conferencia ha sido escuchada en Frankfurt, Las
+                                            Vegas, Miami, Nashville, Medellín, Bogotá, Cancún, Guadalajara, CDMX y más
+                                            ciudades del mundo. Apasionada de la creatividad y las mariposas amarillas.
+                                        </p>
+                                    </div>
+                                </li>
+
+                                <li class="accordion-item">
+                                    <input class="accordion-item-input" type="checkbox" name="accordion" id="item5"/>
+                                    <label for="item5" class="accordion-item-hd">13:00 - 14:00 HRS. &nbsp;&nbsp;&nbsp;
+                                        <strong>APRENDIENDO SOBRE LA MARCHA</strong><span class="accordion-item-hd-cta">&#9650;</span></label>
+                                    <div class="accordion-item-bd">
+                                        <h4><strong>Diego Stommel</strong>Fundador de Zoé Water. Manager de Haku.</h4>
+                                        <br>
+                                        <p>Director de Hedley & Bennett México. Baterista de Allison, ganador de dos
+                                            discos de oro y platino. Empresario, rockero, amante de las motos y los
+                                            perros.</p>
+                                    </div>
+                                </li>
+
+                                <li class="accordion-item">
+                                    <input class="accordion-item-input" type="checkbox" name="accordion" id="item6"/>
+                                    <label for="item6" class="accordion-item-hd"> 14:00 - 16:00 HRS. &nbsp;&nbsp;&nbsp;
+                                        BREAK - NETWORKING<span class="accordion-item-hd-cta">&#9650;</span></label>
+                                    <div class="accordion-item-bd">
+
+                                    </div>
+                                </li>
 
 
-                        <button class="accordion">Section 1</button>
-                        <div class="panel">
-                          <p>Lorem ipsum...</p>
-                        </div>
-
-                        <button class="accordion">Section 2</button>
-                        <div class="panel">
-                          <p>Lorem ipsum...</p>
-                        </div>
-
-                        <button class="accordion">Section 3</button>
-                        <div class="panel">
-                          <p>Lorem ipsum...</p>
-                        </div>
-
-   try harder -->
-
-            </header>
-            </div>
-
-            <!-- close en
- 
-                            			<div class="grid-33 mobile-grid-100 tablet-grid-100">
-                                        	<div class="box-fade icon-box">
-                                        	<div class="arrow-right"></div>
-                            				<i class="icon-pencil icon-4x service-icon"></i>
-                                            </div>
-                                            <div class="box-fade info"> 
-                                            <h3>Branding</h3>
-                            				<p>Creación de una identidad para que cada elemento de tu marca proyecte tu filosofía.</p>
-                                           </div>
-                            			</div>
-                                        
-                                      
-                            			<div class="grid-33 mobile-grid-100 tablet-grid-100">
-                                        	<div class="box-fade icon-box">
-                                        	<div class="arrow-right"></div>
-                                            <i class="icon-camera icon-4x service-icon"></i>
-                                            </div>
-                                            <div class="box-fade info"> 
-                                            <h3>Fotografía</h3>
-                            				<p>Una fotografía debe ser creativa y agradable. Hay muchas cosas aburridas en la vida.</p>
-                                           </div>
-                                          
-                            			</div>
-                                        
-                               
-                            			<div class="grid-33 mobile-grid-100 tablet-grid-100">	
-                                            <div class="box-fade icon-box">
-                                        	<div class="arrow-right"></div>
-                            				<i class="icon-globe icon-4x service-icon"></i>
-                                            </div>
-                                            <div class="box-fade info"> 
-                                            <h3>Web</h3>
-                            				<p>Creamos una experiencia positiva en tu sitio, para impactar a tus visitantes.</p>
-                                           </div>
-                            			</div>
-
-                                        <div class="grid-33 mobile-grid-100 tablet-grid-100">
-                                            <div class="box-fade icon-box">
-                                            <div class="arrow-right"></div>
-                                            <i class="icon-group icon-4x service-icon"></i>
-                                            </div>
-                                            <div class="box-fade info"> 
-                                            <h3>Capacitación</h3>
-                                            <p>No te limites a contemplar, empieza a aprender para hacer crecer tus ideas.</p>
-                                           </div>
-                                        </div>
-
-                                        <div class="grid-33 mobile-grid-100 tablet-grid-100">
-                                            <div class="box-fade icon-box">
-                                            <div class="arrow-right"></div>
-                                            <i class="icon-cloud icon-4x service-icon"></i>
-                                            </div>
-                                            <div class="box-fade info"> 
-                                            <h3>Apps</h3>
-                                            <p>Hacemos trabajar tus ideas con aplicaciones online para cualquier plataforma. </p>
-                                           </div>
-                                          
-                                        </div>
-
-                                        <div class="grid-33 mobile-grid-100 tablet-grid-100">   
-                                            <div class="box-fade icon-box">
-                                            <div class="arrow-right"></div>
-                                            <i class="icon-thumbs-up-alt icon-4x service-icon"></i>
-                                            </div>
-                                            <div class="box-fade info"> 
-                                            <h3>Campañas</h3>
-                                            <p>Aprovecha diferentes herramientas para lograr una estrategia integral.</p>
-                                           </div>
-                                        </div>
+                                <li class="accordion-item">
+                                    <input class="accordion-item-input" type="checkbox" name="accordion" id="item7"/>
+                                    <label for="item7" class="accordion-item-hd"> 16:00 - 17:00 HRS. &nbsp;&nbsp;&nbsp;
+                                        TODOS PODEMOS HACER HISTORIA<span
+                                                class="accordion-item-hd-cta">&#9650;</span></label>
+                                    <div class="accordion-item-bd">
+                                        <h4><strong>Pepe Ramírez</strong>Fundador de Mi Gran Socio.</h4>
+                                        <br>
+                                        <p>Creativo de campañas para Tequila Cuervo Tradicional, J&B, Start Media,
+                                            Explora México, Mercedes Benz, MVS Multivision, Corona entre otros. Fundador
+                                            de una de las primeras agencias de modelaje en CDMX haciendo pasarelas para
+                                            Versace. Empresario intenso y amante de las grandes ideas.</p>
+                                    </div>
+                                </li>
 
 
-            try harder -->
+                                <li class="accordion-item">
+                                    <input class="accordion-item-input" type="checkbox" name="accordion" id="item8"/>
+                                    <label for="item8" class="accordion-item-hd">17:00 - 18:00 HRS. &nbsp;&nbsp;&nbsp;
+                                        <strong>PLATICA SORPRESA</strong> <span
+                                                class="accordion-item-hd-cta">&#9650;</span></label>
+                                    <div class="accordion-item-bd">
+                                        <p>Invitado Especial - Discovery Chanel</p>
+                                    </div>
+                                </li>
+
+                                <li class="accordion-item">
+                                    <input class="accordion-item-input" type="checkbox" name="accordion" id="item9"/>
+                                    <label for="item9" class="accordion-item-hd">18:00 - 19:00 HRS. &nbsp;&nbsp;&nbsp;
+                                        <strong>HAZLA DE PEDO, DEJA HUELLA</strong> <span class="accordion-item-hd-cta">&#9650;</span></label>
+                                    <div class="accordion-item-bd">
+                                        <h4><strong>Jorge Gómez Pimienta (Yorsh de Polanco)<br></strong>Fundador de
+                                            Apache Brands.</h4>
+                                        <br>
+                                        <p>Nominado por MTV como fenómeno viral del año. Su imagen es patrocinada por
+                                            Pepsi, Heineken, TV Azteza, Jeep, Head & Shoulders, Sport City, Marti. 18
+                                            años de experiencia en marketing trabajando para Coca-Cola y PepsiCo.
+                                            Filántropo, empresario, deportista y amante de los perros y la
+                                            naturaleza.</p>
+                                    </div>
+                                </li>
+
+                                <li class="accordion-item">
+                                    <input class="accordion-item-input" type="checkbox" name="accordion" id="item10"/>
+                                    <label for="item10" class="accordion-item-hd">19:00 - 20:00 HRS. &nbsp;&nbsp;&nbsp;
+                                        <strong>CLAUSURA</strong> <span
+                                                class="accordion-item-hd-cta">&#9650;</span></label>
+                                    <div class="accordion-item-bd"><p>Ideas Party - ft. Social Business</p></div>
+                                </li>
+
+                                <li class="accordion-item">
+                                    <input class="accordion-item-input" type="checkbox" name="accordion" id="item11"/>
+                                    <label for="item11" class="accordion-item-hd"> 20:00 HRS. &nbsp;&nbsp;&nbsp;
+                                        <strong>FIESTA DE CLAUSURA</strong> <span
+                                                class="accordion-item-hd-cta">&#9650;</span></label>
+                                    <div class="accordion-item-bd"><p>Lugar por confirmar.</p></div>
+                                </li>
+
+                            </ul>
 
 
+                            <!-- close en
 
 
-                   
+                                                  <button class="accordion">Section 1</button>
+                                                  <div class="panel">
+                                                    <p>Lorem ipsum...</p>
+                                                  </div>
+
+                                                  <button class="accordion">Section 2</button>
+                                                  <div class="panel">
+                                                    <p>Lorem ipsum...</p>
+                                                  </div>
+
+                                                  <button class="accordion">Section 3</button>
+                                                  <div class="panel">
+                                                    <p>Lorem ipsum...</p>
+                                                  </div>
+
+                             try harder -->
+
+                        </header>
+                    </div>
+
+                    <!-- close en
+
+                                                <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                                                    <div class="box-fade icon-box">
+                                                    <div class="arrow-right"></div>
+                                                    <i class="icon-pencil icon-4x service-icon"></i>
+                                                    </div>
+                                                    <div class="box-fade info">
+                                                    <h3>Branding</h3>
+                                                    <p>Creación de una identidad para que cada elemento de tu marca proyecte tu filosofía.</p>
+                                                   </div>
+                                                </div>
 
 
+                                                <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                                                    <div class="box-fade icon-box">
+                                                    <div class="arrow-right"></div>
+                                                    <i class="icon-camera icon-4x service-icon"></i>
+                                                    </div>
+                                                    <div class="box-fade info">
+                                                    <h3>Fotografía</h3>
+                                                    <p>Una fotografía debe ser creativa y agradable. Hay muchas cosas aburridas en la vida.</p>
+                                                   </div>
+
+                                                </div>
 
 
-    
-    </div><!-- close grid-100 -->
-		</div><!-- close grid container -->
-	</section><!-- close service section -->
-    
+                                                <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                                                    <div class="box-fade icon-box">
+                                                    <div class="arrow-right"></div>
+                                                    <i class="icon-globe icon-4x service-icon"></i>
+                                                    </div>
+                                                    <div class="box-fade info">
+                                                    <h3>Web</h3>
+                                                    <p>Creamos una experiencia positiva en tu sitio, para impactar a tus visitantes.</p>
+                                                   </div>
+                                                </div>
+
+                                                <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                                                    <div class="box-fade icon-box">
+                                                    <div class="arrow-right"></div>
+                                                    <i class="icon-group icon-4x service-icon"></i>
+                                                    </div>
+                                                    <div class="box-fade info">
+                                                    <h3>Capacitación</h3>
+                                                    <p>No te limites a contemplar, empieza a aprender para hacer crecer tus ideas.</p>
+                                                   </div>
+                                                </div>
+
+                                                <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                                                    <div class="box-fade icon-box">
+                                                    <div class="arrow-right"></div>
+                                                    <i class="icon-cloud icon-4x service-icon"></i>
+                                                    </div>
+                                                    <div class="box-fade info">
+                                                    <h3>Apps</h3>
+                                                    <p>Hacemos trabajar tus ideas con aplicaciones online para cualquier plataforma. </p>
+                                                   </div>
+
+                                                </div>
+
+                                                <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                                                    <div class="box-fade icon-box">
+                                                    <div class="arrow-right"></div>
+                                                    <i class="icon-thumbs-up-alt icon-4x service-icon"></i>
+                                                    </div>
+                                                    <div class="box-fade info">
+                                                    <h3>Campañas</h3>
+                                                    <p>Aprovecha diferentes herramientas para lograr una estrategia integral.</p>
+                                                   </div>
+                                                </div>
+
+
+                    try harder -->
+
+
+                </div><!-- close grid-100 -->
+            </div><!-- close grid container -->
+        </section><!-- close service section -->
+
     </div><!-- close nav-waypoint -->
-    
+
     <div class="clear"></div>
-    
+
     <!-- portfolio section -->
     <div class="nav-waypoint">
-	<section id="portfolio-section" class="portfolio-section content-section">
-		<div class="grid-container">
-        	
-            <!-- section header -->
-            <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
-                <header class="section-header">
-                    <h2 class="nuevotit"><span>Los Speakers</span></h2>
+        <section id="portfolio-section" class="portfolio-section content-section">
+            <div class="grid-container">
+
+                <!-- section header -->
+                <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                    <header class="section-header">
+                        <h2 class="nuevotit"><span>Los Speakers</span></h2>
 
 
-                    <br>
+                        <br>
 
 
-                    <p class="section-slogan2">Un evento para emprendedores reales, rebeldes, desadaptados y hambrientos.</p>
-                </header>
-            </div>
-            <!-- close section header -->
-            
-            <div class="clear"></div>
-
-             <!-- portfolio box 3 -->
-            <div class="grid-33 mobile-grid-50 tablet-grid-50">
-                <a>
-                <div class="portfolio-box">       
-                <figure class="portfolio-image"><img src="images/1.png" alt="portfolio image"></figure><!-- close portfolio image -->
-                <div class="portfolio-caption">
-                    <h3 class="portfolio-title"><span class="portfolio-category"></span></h3>
-                </div><!-- close portfolio caption -->
-                </div>     
-                </a>          
-            </div><!-- close portfolio -->
-
-            <!-- portfolio box 3 -->
-            <div class="grid-33 mobile-grid-50 tablet-grid-50">
-                <a class="portfolio-popup-video" >
-                <div class="portfolio-box">       
-                <figure class="portfolio-image"><img src="images/2.png" alt="portfolio image"></figure><!-- close portfolio image -->
-                <div class="portfolio-caption">
-                    <h3 class="portfolio-title"><span class="portfolio-category"></span></h3>
-                </div><!-- close portfolio caption -->
-                </div>     
-                </a>          
-            </div><!-- close portfolio -->
-
-            <!-- portfolio box 3 -->
-            <div class="grid-33 mobile-grid-50 tablet-grid-50">
-                <a class="portfolio-popup-video" >
-                <div class="portfolio-box">       
-                <figure class="portfolio-image"><img src="images/3.png" alt="portfolio image"></figure><!-- close portfolio image -->
-                <div class="portfolio-caption">
-                    <h3 class="portfolio-title"><span class="portfolio-category"></span></h3>
-                </div><!-- close portfolio caption -->
-                </div>     
-                </a>          
-            </div><!-- close portfolio -->
-
-             <!-- portfolio box 3 -->
-            <div class="grid-33 mobile-grid-50 tablet-grid-50">
-                <a class="portfolio-popup-video" >
-                <div class="portfolio-box">       
-                <figure class="portfolio-image"><img src="images/4.png" alt="portfolio image"></figure><!-- close portfolio image -->
-                <div class="portfolio-caption">
-                    <h3 class="portfolio-title"><span class="portfolio-category"></span></h3>
-                </div><!-- close portfolio caption -->
-                </div>     
-                </a>          
-            </div><!-- close portfolio -->
-
-            <!-- portfolio box 3 -->
-            <div class="grid-33 mobile-grid-50 tablet-grid-50">
-                <a class="portfolio-popup-video" >
-                <div class="portfolio-box">       
-                <figure class="portfolio-image"><img src="images/5.png" alt="portfolio image"></figure><!-- close portfolio image -->
-                <div class="portfolio-caption">
-                    <h3 class="portfolio-title"><span class="portfolio-category"></span></h3>
-                </div><!-- close portfolio caption -->
-                </div>     
-                </a>          
-            </div><!-- close portfolio -->
-
-
-            <!-- portfolio box 3 -->
-            <div class="grid-33 mobile-grid-50 tablet-grid-50">
-                <a class="portfolio-popup-video" >
-                <div class="portfolio-box">       
-                <figure class="portfolio-image"><img src="images/6.png" alt="portfolio image"></figure><!-- close portfolio image -->
-                <div class="portfolio-caption">
-                    <h3 class="portfolio-title"><span class="portfolio-category"></span></h3>
-                </div><!-- close portfolio caption -->
-                </div>     
-                </a>          
-            </div><!-- close portfolio -->
-
-
-	</section><!-- close portfolio section -->
-    
-    <div class="clear"></div>
-    
-    <!-- social section -->
-     <section id="social-section" class="snow parallax-section parallax-background social-section">
-     <div class="parallax-overlay parallax-overlay-4"></div><!-- parallax overlay -->
-		<div class="grid-container parallax-content">
-        	<div class="grid-parent grid-100 mobile-grid-100 tablet-grid-100">
-            
-            	<!-- parallax header -->
-            	<div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
-                    <header class="parallax-header">
-                    <h2 class="nuevotit"><span>COMPLETA TU <br> REGISTRO AQUÍ</span></h2>
-                    <p class="parallax-slogan">Si ya compraste tu boleto es momento de terminar tu registro. Bienvenido</p>
-
-
-<!-- parallax he
-
-                    <p class="parallax-slogan">Hola mi nombre es: Tu nombre completo
- . Tengo __ años
-. Soy de: Puebla, CDMX
-. Ya he adquirido mi boleto en algún punto de venta y voy a terminar mi registro. Mi correo electrónico es: tu@mail.com
- . El código de mi boleto es: 00 000
- . 
-Nos vemos este 27 de Octubre. ¡Hasta pronto!</p>
-
-
-ader -->
-
-
-
-
+                        <p class="section-slogan2">Un evento para emprendedores reales, rebeldes, desadaptados y
+                            hambrientos.</p>
                     </header>
                 </div>
-            
+                <!-- close section header -->
 
+                <div class="clear"></div>
 
-            
-            <div class="clear"></div>
-
-
-
- 
-
-
-
-            <form id="myForm" class=" grid-70 prefix-15 mobile-grid-100 tablet-grid-100 nl-form  ">
-
-                            Hola mi nombre es: 
-                            <input id="name" type="text" name="nombre" placeholder=" Tu nombre completo" data-subline="Enter your name"/>
-                            Tengo <input id="name" type="text" name="edad" placeholder=" __ años" data-subline="Enter your name"/> Soy de:
-                <input id="ciudad" type="text" name="ciudad" placeholder="Puebla, CDMX " data-subline="Enter your name"/>
-                            Ya he adquirido mi boleto en algún punto de venta <br> y voy a terminar mi registro. <br> <br> Mi correo electrónico es:
-
-                            <input id="name" type="text" name="correo" placeholder=" tu@mail.com" data-subline="Enter your name"/>
-                            
-                            El código de mi boleto es:
-
-                            <input id="name" type="text" name="codigo" placeholder="00 000" data-subline="Enter your name"/>
-                            
-                           
-
-                            Nos vemos este 27 de Octubre. ¡Hasta pronto!
-
-                            <br>
-                            <br>
-
-
-                            <div class="nl-submit-wrap">
-                                <button class="btn-effect" type="submit" id="submit_btn_2">Enviar</button>
-                            </div>              
-                            <div id="result"></div>
-                            <div class="nl-overlay"></div>
-            </form>
-            
-
-            <div class="clear"></div>
-       
-            <!-- social network -->
-            <ul class="social-network">
-                <li class="facebook grid-25 tablet-grid-25 mobile-grid-25">
-                    <a class="social-link" href="https://www.facebook.com/ideaspartymx/" target="_blank">
-                    <span class="social-icon"><img src="images/fb.svg"> </span>
+                <!-- portfolio box 3 -->
+                <div class="grid-33 mobile-grid-50 tablet-grid-50">
+                    <a>
+                        <div class="portfolio-box">
+                            <figure class="portfolio-image"><img src="images/1.png" alt="portfolio image"></figure>
+                            <!-- close portfolio image -->
+                            <div class="portfolio-caption">
+                                <h3 class="portfolio-title"><span class="portfolio-category"></span></h3>
+                            </div><!-- close portfolio caption -->
+                        </div>
                     </a>
-                </li>
-              
-                
-                <li class="youtube grid-25 tablet-grid-25 mobile-grid-25">
-                    <a class="social-link" href="https://www.youtube.com/channel/UCKJsIe4-XyKj5FtM8dafb3A" target="_blank">
-                    <span class="social-icon"><img src="images/yt.svg"></span>
-                    </a>
-                </li>
+                </div><!-- close portfolio -->
 
-                  <li class="twitter grid-25 tablet-grid-25 mobile-grid-25">
-                    <a class="social-link" href="https://twitter.com/ideaspartymx" target="_blank">
-                    <span class="social-icon"><img src="images/tw.svg"> </span>
+                <!-- portfolio box 3 -->
+                <div class="grid-33 mobile-grid-50 tablet-grid-50">
+                    <a class="portfolio-popup-video">
+                        <div class="portfolio-box">
+                            <figure class="portfolio-image"><img src="images/2.png" alt="portfolio image"></figure>
+                            <!-- close portfolio image -->
+                            <div class="portfolio-caption">
+                                <h3 class="portfolio-title"><span class="portfolio-category"></span></h3>
+                            </div><!-- close portfolio caption -->
+                        </div>
                     </a>
-                </li>
+                </div><!-- close portfolio -->
 
-                <li class="instagram grid-25 tablet-grid-25 mobile-grid-25">
-                    <a class="social-link" href="https://www.instagram.com/ideaspartymx/" target="_blank">
-                    <span class="social-icon"><img src="images/in.svg"> </span>
+                <!-- portfolio box 3 -->
+                <div class="grid-33 mobile-grid-50 tablet-grid-50">
+                    <a class="portfolio-popup-video">
+                        <div class="portfolio-box">
+                            <figure class="portfolio-image"><img src="images/3.png" alt="portfolio image"></figure>
+                            <!-- close portfolio image -->
+                            <div class="portfolio-caption">
+                                <h3 class="portfolio-title"><span class="portfolio-category"></span></h3>
+                            </div><!-- close portfolio caption -->
+                        </div>
                     </a>
-                </li>
-            </ul><!-- close social network -->
+                </div><!-- close portfolio -->
 
-      		</div><!-- close grid-100 -->
-		</div><!-- close grid container -->
-	</section><!-- close social section -->
+                <!-- portfolio box 3 -->
+                <div class="grid-33 mobile-grid-50 tablet-grid-50">
+                    <a class="portfolio-popup-video">
+                        <div class="portfolio-box">
+                            <figure class="portfolio-image"><img src="images/4.png" alt="portfolio image"></figure>
+                            <!-- close portfolio image -->
+                            <div class="portfolio-caption">
+                                <h3 class="portfolio-title"><span class="portfolio-category"></span></h3>
+                            </div><!-- close portfolio caption -->
+                        </div>
+                    </a>
+                </div><!-- close portfolio -->
+
+                <!-- portfolio box 3 -->
+                <div class="grid-33 mobile-grid-50 tablet-grid-50">
+                    <a class="portfolio-popup-video">
+                        <div class="portfolio-box">
+                            <figure class="portfolio-image"><img src="images/5.png" alt="portfolio image"></figure>
+                            <!-- close portfolio image -->
+                            <div class="portfolio-caption">
+                                <h3 class="portfolio-title"><span class="portfolio-category"></span></h3>
+                            </div><!-- close portfolio caption -->
+                        </div>
+                    </a>
+                </div><!-- close portfolio -->
+
+
+                <!-- portfolio box 3 -->
+                <div class="grid-33 mobile-grid-50 tablet-grid-50">
+                    <a class="portfolio-popup-video">
+                        <div class="portfolio-box">
+                            <figure class="portfolio-image"><img src="images/6.png" alt="portfolio image"></figure>
+                            <!-- close portfolio image -->
+                            <div class="portfolio-caption">
+                                <h3 class="portfolio-title"><span class="portfolio-category"></span></h3>
+                            </div><!-- close portfolio caption -->
+                        </div>
+                    </a>
+                </div><!-- close portfolio -->
+
+
+        </section><!-- close portfolio section -->
+
+        <div class="clear"></div>
+
+        <!-- social section -->
+        <section id="social-section" class="snow parallax-section parallax-background social-section">
+            <div class="parallax-overlay parallax-overlay-4"></div><!-- parallax overlay -->
+            <div class="grid-container parallax-content">
+                <div class="grid-parent grid-100 mobile-grid-100 tablet-grid-100">
+
+                    <!-- parallax header -->
+                    <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                        <header class="parallax-header">
+                            <h2 class="nuevotit"><span>COMPLETA TU <br> REGISTRO AQUÍ</span></h2>
+                            <p class="parallax-slogan">Si ya compraste tu boleto es momento de terminar tu registro.
+                                Bienvenido</p>
+
+
+                            <!-- parallax he
+
+                                                <p class="parallax-slogan">Hola mi nombre es: Tu nombre completo
+                             . Tengo __ años
+                            . Soy de: Puebla, CDMX
+                            . Ya he adquirido mi boleto en algún punto de venta y voy a terminar mi registro. Mi correo electrónico es: tu@mail.com
+                             . El código de mi boleto es: 00 000
+                             .
+                            Nos vemos este 27 de Octubre. ¡Hasta pronto!</p>
+
+
+                            ader -->
+
+
+                        </header>
+                    </div>
+
+
+                    <div class="clear"></div>
+
+
+                    <form id="myForm" class=" grid-70 prefix-15 mobile-grid-100 tablet-grid-100 nl-form  ">
+
+                        Hola mi nombre es:
+                        <input id="nombre" type="text" name="nombre" placeholder=" Tu nombre completo"
+                               data-subline="Enter your name"/>
+                        Tengo <input id="edad" type="text" name="edad" placeholder="___"
+                                     data-subline="Enter your name"/> años. </br></br> Soy de:
+                        <input id="ciudad" type="text" name="ciudad" placeholder="Puebla, CDMX "
+                               data-subline="Enter your name"/>
+                        Ya he adquirido mi boleto en algún punto de venta <br> y voy a terminar mi registro. <br> <br>
+                        Mi correo electrónico es:
+
+                        <input id="correo" type="text" name="correo" placeholder=" tu@mail.com"
+                               data-subline="Enter your name"/>
+
+                        El código de mi boleto es:
+
+                        <input id="codigo" type="text" name="codigo" placeholder="00 000"
+                               data-subline="Enter your name"/>
+
+
+                        Nos vemos este 27 de Octubre. ¡Hasta pronto!
+
+                        <br>
+                        <br>
+
+
+                        <div class="nl-submit-wrap">
+                            <button class="btn-effect" type="submit" id="submit_btn_2">Enviar</button>
+                        </div>
+                        <div id="result"></div>
+                        <div class="nl-overlay"></div>
+                    </form>
+
+
+                    <div class="clear"></div>
+
+                    <!-- social network -->
+                    <ul class="social-network">
+                        <li class="facebook grid-25 tablet-grid-25 mobile-grid-25">
+                            <a class="social-link" href="https://www.facebook.com/ideaspartymx/" target="_blank">
+                                <span class="social-icon"><img src="images/fb.svg"> </span>
+                            </a>
+                        </li>
+
+
+                        <li class="youtube grid-25 tablet-grid-25 mobile-grid-25">
+                            <a class="social-link" href="https://www.youtube.com/channel/UCKJsIe4-XyKj5FtM8dafb3A"
+                               target="_blank">
+                                <span class="social-icon"><img src="images/yt.svg"></span>
+                            </a>
+                        </li>
+
+                        <li class="twitter grid-25 tablet-grid-25 mobile-grid-25">
+                            <a class="social-link" href="https://twitter.com/ideaspartymx" target="_blank">
+                                <span class="social-icon"><img src="images/tw.svg"> </span>
+                            </a>
+                        </li>
+
+                        <li class="instagram grid-25 tablet-grid-25 mobile-grid-25">
+                            <a class="social-link" href="https://www.instagram.com/ideaspartymx/" target="_blank">
+                                <span class="social-icon"><img src="images/in.svg"> </span>
+                            </a>
+                        </li>
+                    </ul><!-- close social network -->
+
+                </div><!-- close grid-100 -->
+            </div><!-- close grid container -->
+        </section><!-- close social section -->
     </div><!-- close nav-waypoint -->
-    
+
     <div class="clear"></div>
-    
+
     <!-- testimonial section -->
 
-   <!-- close test
+    <!-- close test
 
-	<section id="client-section" class="testimonial-section content-section">
-    	
-		<div class="grid-container">
-        
-            <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
-                    
-                <header class="parallax-header">
+     <section id="client-section" class="testimonial-section content-section">
 
-                    <h2 class="nuevotit"><span>Sponsors</span></h2>
+         <div class="grid-container">
 
-                        <p>Gracias a todos por ser parte de esta experiencia.</p>
+             <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
 
-                            <br>
-                            <hr>
-                            <br>
-                            <br>
-                            <br>
-                       
-                </header>
+                 <header class="parallax-header">
 
-            </div>
-           
-           <div class="clear"></div>
-        	
-		</div>
+                     <h2 class="nuevotit"><span>Sponsors</span></h2>
 
-        <div class="grid-container">
-        
-            <div class="client-holder grid-parent grid-100 tablet-grid-100 mobile-grid-100">
-        
-                <div class="grid-33 tablet-grid-33 mobile-grid-100">
-                    <div class="client-logo">
-                        <a href="http://www.itesm.mx/wps/wcm/connect/Campus/PUE/Puebla/" target="blank"><img src="images/tec.png" width="290px" alt="client logo"></a>
-                    </div>
-                </div>
-                
-                <div class="grid-33 tablet-grid-33 mobile-grid-50">
-                    <div class="client-logo">
-                        <a href="https://www.facebook.com/WMProduccionesDJ" target="blank"><img src="images/wm.png" width="100px" alt="client logo"></a>
-                    </div>
-                </div>
-             
-                <div class="grid-33 tablet-grid-33 mobile-grid-50">
-                    <div class="client-logo">
-                        <a href="http://thinkersinmotion.mx" target="blank"> <img src="images/thinkers.gif" width="100px" alt="client logo"></a>
-                    </div>
-                </div>
+                         <p>Gracias a todos por ser parte de esta experiencia.</p>
 
-            </div>        
-        
-        </div>
+                             <br>
+                             <hr>
+                             <br>
+                             <br>
+                             <br>
 
-    </section>
+                 </header>
 
- imonial section -->
+             </div>
+
+            <div class="clear"></div>
+
+         </div>
+
+         <div class="grid-container">
+
+             <div class="client-holder grid-parent grid-100 tablet-grid-100 mobile-grid-100">
+
+                 <div class="grid-33 tablet-grid-33 mobile-grid-100">
+                     <div class="client-logo">
+                         <a href="http://www.itesm.mx/wps/wcm/connect/Campus/PUE/Puebla/" target="blank"><img src="images/tec.png" width="290px" alt="client logo"></a>
+                     </div>
+                 </div>
+
+                 <div class="grid-33 tablet-grid-33 mobile-grid-50">
+                     <div class="client-logo">
+                         <a href="https://www.facebook.com/WMProduccionesDJ" target="blank"><img src="images/wm.png" width="100px" alt="client logo"></a>
+                     </div>
+                 </div>
+
+                 <div class="grid-33 tablet-grid-33 mobile-grid-50">
+                     <div class="client-logo">
+                         <a href="http://thinkersinmotion.mx" target="blank"> <img src="images/thinkers.gif" width="100px" alt="client logo"></a>
+                     </div>
+                 </div>
+
+             </div>
+
+         </div>
+
+     </section>
+
+  imonial section -->
 
 
- <section id="c-section" class="snow gris parallax-section parallax-background service-section">
-     <div class="parallax-overlay parallax-overlay-3"></div>
+    <section id="c-section" class="snow gris parallax-section parallax-background service-section">
+        <div class="parallax-overlay parallax-overlay-3"></div>
         <div class="grid-container parallax-content">
             <div class="grid-parent grid-100 mobile-grid-100 tablet-grid-100">
-            
-            <!-- entry header -->
-            <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
-            <header class="parallax-header">
 
-            <h2 class="nuevotit"><span>Sponsors</span></h2>
-                <br>
-            
-            </header>
+                <!-- entry header -->
+                <div class="grid-70 prefix-15 mobile-grid-100 tablet-grid-100">
+                    <header class="parallax-header">
 
-            <a href="http://thikersinmotion.mx" class="grid-10 prefix-20 mobile-grid-20 tablet-grid-20" >
-                <img src="images/s1.png" >
-            </a>
+                        <h2 class="nuevotit"><span>Sponsors</span></h2>
+                        <br>
 
-             <a href="http://thinkersinmotion.mx" class="grid-10 prefix-20 mobile-grid-20 tablet-grid-20" >
-                <img src="images/s2.png" >
-            </a>
+                    </header>
 
-             <a href="http://thikersinmotion.mx" class="grid-10 prefix-20 mobile-grid-20 tablet-grid-20" >
-                <img src="images/s3.png" >
-            </a>
+                    <a href="http://thikersinmotion.mx" class="grid-10 prefix-20 mobile-grid-20 tablet-grid-20">
+                        <img src="images/s1.png">
+                    </a>
 
-            </div>
+                    <a href="http://thinkersinmotion.mx" class="grid-10 prefix-20 mobile-grid-20 tablet-grid-20">
+                        <img src="images/s2.png">
+                    </a>
 
-            <!-- close en
- 
-                                        <div class="grid-33 mobile-grid-100 tablet-grid-100">
-                                            <div class="box-fade icon-box">
-                                            <div class="arrow-right"></div>
-                                            <i class="icon-pencil icon-4x service-icon"></i>
+                    <a href="http://thikersinmotion.mx" class="grid-10 prefix-20 mobile-grid-20 tablet-grid-20">
+                        <img src="images/s3.png">
+                    </a>
+
+                </div>
+
+                <!-- close en
+
+                                            <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                                                <div class="box-fade icon-box">
+                                                <div class="arrow-right"></div>
+                                                <i class="icon-pencil icon-4x service-icon"></i>
+                                                </div>
+                                                <div class="box-fade info">
+                                                <h3>Branding</h3>
+                                                <p>Creación de una identidad para que cada elemento de tu marca proyecte tu filosofía.</p>
+                                               </div>
                                             </div>
-                                            <div class="box-fade info"> 
-                                            <h3>Branding</h3>
-                                            <p>Creación de una identidad para que cada elemento de tu marca proyecte tu filosofía.</p>
-                                           </div>
-                                        </div>
-                                        
-                                      
-                                        <div class="grid-33 mobile-grid-100 tablet-grid-100">
-                                            <div class="box-fade icon-box">
-                                            <div class="arrow-right"></div>
-                                            <i class="icon-camera icon-4x service-icon"></i>
+
+
+                                            <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                                                <div class="box-fade icon-box">
+                                                <div class="arrow-right"></div>
+                                                <i class="icon-camera icon-4x service-icon"></i>
+                                                </div>
+                                                <div class="box-fade info">
+                                                <h3>Fotografía</h3>
+                                                <p>Una fotografía debe ser creativa y agradable. Hay muchas cosas aburridas en la vida.</p>
+                                               </div>
+
                                             </div>
-                                            <div class="box-fade info"> 
-                                            <h3>Fotografía</h3>
-                                            <p>Una fotografía debe ser creativa y agradable. Hay muchas cosas aburridas en la vida.</p>
-                                           </div>
-                                          
-                                        </div>
-                                        
-                               
-                                        <div class="grid-33 mobile-grid-100 tablet-grid-100">   
-                                            <div class="box-fade icon-box">
-                                            <div class="arrow-right"></div>
-                                            <i class="icon-globe icon-4x service-icon"></i>
+
+
+                                            <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                                                <div class="box-fade icon-box">
+                                                <div class="arrow-right"></div>
+                                                <i class="icon-globe icon-4x service-icon"></i>
+                                                </div>
+                                                <div class="box-fade info">
+                                                <h3>Web</h3>
+                                                <p>Creamos una experiencia positiva en tu sitio, para impactar a tus visitantes.</p>
+                                               </div>
                                             </div>
-                                            <div class="box-fade info"> 
-                                            <h3>Web</h3>
-                                            <p>Creamos una experiencia positiva en tu sitio, para impactar a tus visitantes.</p>
-                                           </div>
-                                        </div>
 
-                                        <div class="grid-33 mobile-grid-100 tablet-grid-100">
-                                            <div class="box-fade icon-box">
-                                            <div class="arrow-right"></div>
-                                            <i class="icon-group icon-4x service-icon"></i>
+                                            <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                                                <div class="box-fade icon-box">
+                                                <div class="arrow-right"></div>
+                                                <i class="icon-group icon-4x service-icon"></i>
+                                                </div>
+                                                <div class="box-fade info">
+                                                <h3>Capacitación</h3>
+                                                <p>No te limites a contemplar, empieza a aprender para hacer crecer tus ideas.</p>
+                                               </div>
                                             </div>
-                                            <div class="box-fade info"> 
-                                            <h3>Capacitación</h3>
-                                            <p>No te limites a contemplar, empieza a aprender para hacer crecer tus ideas.</p>
-                                           </div>
-                                        </div>
 
-                                        <div class="grid-33 mobile-grid-100 tablet-grid-100">
-                                            <div class="box-fade icon-box">
-                                            <div class="arrow-right"></div>
-                                            <i class="icon-cloud icon-4x service-icon"></i>
+                                            <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                                                <div class="box-fade icon-box">
+                                                <div class="arrow-right"></div>
+                                                <i class="icon-cloud icon-4x service-icon"></i>
+                                                </div>
+                                                <div class="box-fade info">
+                                                <h3>Apps</h3>
+                                                <p>Hacemos trabajar tus ideas con aplicaciones online para cualquier plataforma. </p>
+                                               </div>
+
                                             </div>
-                                            <div class="box-fade info"> 
-                                            <h3>Apps</h3>
-                                            <p>Hacemos trabajar tus ideas con aplicaciones online para cualquier plataforma. </p>
-                                           </div>
-                                          
-                                        </div>
 
-                                        <div class="grid-33 mobile-grid-100 tablet-grid-100">   
-                                            <div class="box-fade icon-box">
-                                            <div class="arrow-right"></div>
-                                            <i class="icon-thumbs-up-alt icon-4x service-icon"></i>
+                                            <div class="grid-33 mobile-grid-100 tablet-grid-100">
+                                                <div class="box-fade icon-box">
+                                                <div class="arrow-right"></div>
+                                                <i class="icon-thumbs-up-alt icon-4x service-icon"></i>
+                                                </div>
+                                                <div class="box-fade info">
+                                                <h3>Campañas</h3>
+                                                <p>Aprovecha diferentes herramientas para lograr una estrategia integral.</p>
+                                               </div>
                                             </div>
-                                            <div class="box-fade info"> 
-                                            <h3>Campañas</h3>
-                                            <p>Aprovecha diferentes herramientas para lograr una estrategia integral.</p>
-                                           </div>
-                                        </div>
 
 
-            try header -->
+                try header -->
 
-    
-    </div><!-- close grid-100 -->
+
+            </div><!-- close grid-100 -->
         </div><!-- close grid container -->
     </section><!-- close service section -->
 
 
-     
     <div class="clear"></div>
-    
+
     <!-- client section -->
-    
-	<!-- Footer Section -->
-	<footer class="footer">
-	
-    	<div class="grid-container">
-			<div class="grid-100 mobile-grid-100 tablet-grid-100">
+
+    <!-- Footer Section -->
+    <footer class="footer">
+
+        <div class="grid-container">
+            <div class="grid-100 mobile-grid-100 tablet-grid-100">
                 <h2 class="logo"><a href="#top"><img src="images/logo.gif" alt="logo"></a></h2>
                 <span class="copyright"><a target="_blank">Social Business ©</a></span>
-         	</div>
-		</div><!-- close container -->
-	</footer><!-- close footer -->
+            </div>
+        </div><!-- close container -->
+    </footer><!-- close footer -->
 </div>
-	
-    <!-- Load Javascript
-  	================================================== -->
-    <script src="js/jquery.mb.YTPlayer.js"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
-    <script src="js/jquery.parallax.min.js"></script>
-    <script src="js/jquery.scrollTo.min.js"></script>
-	<script src="js/waypoints.min.js"></script>
-	<script src="js/jquery.magnific-popup.min.js"></script>
-   	<script src="js/jquery.custom.js"></script>
-   	<script src="js/_custom.js"></script>
+
+<!-- Load Javascript
+  ================================================== -->
+<script src="js/jquery.mb.YTPlayer.js"></script>
+<script src="js/jquery.flexslider-min.js"></script>
+<script src="js/jquery.parallax.min.js"></script>
+<script src="js/jquery.scrollTo.min.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/jquery.custom.js"></script>
+<script src="/jquery-ui/jquery-ui.js"></script>
+<script src="js/_custom.js"></script>
 
 <!-- End Document
 ================================================== -->

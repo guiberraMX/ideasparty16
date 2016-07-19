@@ -1,6 +1,51 @@
 (function ($) {
     //jorge Juarez
 
+
+    var availableTags = [
+        "Aguascalientes",
+        "Baja California",
+        "Baja California Sur",
+        "Campeche",
+        "CDMX",
+        "Chiapas",
+        "Chihuahua",
+        "Coahuila",
+        "Colima",
+        "Durango",
+        "Estado de México",
+        "Guanajuato",
+        "Guerrero",
+        "Hidalgo",
+        "Jalisco",
+        "Michoacán",
+        "Morelos",
+        "Nayarit",
+        "Nuevo León",
+        "Oaxaca",
+        "Puebla",
+        "Querétaro",
+        "Quintana Roo",
+        "San Luis Potosí",
+        "Sinaloa",
+        "Sonora",
+        "Tabasco",
+        "Tamaulipas",
+        "Tlaxcala",
+        "Veracruz",
+        "Yucatán",
+        "Zacatecas",
+        "Otro"
+    ];
+
+
+    $(document).ready(function () {
+        $("#ciudad").autocomplete({
+            source: availableTags
+        });
+    });
+
+
     $("#submit_btn_2").click(function (e) {
         e.preventDefault();
 
@@ -17,7 +62,7 @@
         try {
 
             var filter = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-            
+
 
             if (formData.nombre == '') throw new Error("Ingresa tu Nombre");
             if (formData.edad == '') throw new Error("Ingresa tu Edad");
@@ -42,7 +87,7 @@
             var error1 = '<div class="enter-name col-lg-3 align-center"> ' + ex.message + ' </div>';
             $("#result").hide().html(error1).fadeIn(500);
         }
-        
+
 
     });
 
