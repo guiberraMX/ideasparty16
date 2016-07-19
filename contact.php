@@ -24,7 +24,7 @@ if($_POST)
 	if(!isset($_POST["nombre"])
 		|| !isset($_POST["edad"])
 		|| !isset($_POST["ciudad"])
-		|| !isset($_POST["email"])
+		|| !isset($_POST["correo"])
 		|| !isset($_POST["codigo"]))
 	{
 		$output = json_encode(array('type'=>'error', 'text' => 'Por favor rellena todos los campos!'));
@@ -33,7 +33,7 @@ if($_POST)
 
 	//Sanitize input data using PHP filter_var().
 	$user_Name        = filter_var($_POST["nombre"], FILTER_SANITIZE_STRING);
-	$user_Email       = filter_var($_POST["email"], FILTER_SANITIZE_EMAIL);
+	$user_Email       = filter_var($_POST["correo"], FILTER_SANITIZE_EMAIL);
 	$edad        = filter_var($_POST["edad"], FILTER_SANITIZE_STRING);
 	$ciudad        = filter_var($_POST["ciudad"], FILTER_SANITIZE_STRING);
 	$codigo        = filter_var($_POST["codigo"], FILTER_SANITIZE_STRING);

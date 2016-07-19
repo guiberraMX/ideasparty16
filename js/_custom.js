@@ -42,10 +42,7 @@
             var error1 = '<div class="enter-name col-lg-3 align-center"> ' + ex.message + ' </div>';
             $("#result").hide().html(error1).fadeIn(500);
         }
-
-
-        console.log(data);
-        alert(2);
+        
 
     });
 
