@@ -204,7 +204,10 @@ body {
 
 
 
-
+.loscracks{
+	font-size: 1.6em !important;
+	text-align: center !important;
+}
 
 
    
@@ -212,7 +215,9 @@ body {
 
 
 
-
+.loscracks span {
+	font-size: 14px !important;
+}
 
 
 
