@@ -259,6 +259,27 @@ body {
 	font-size: 2.6em  !important;
 	font-weight: 800 !important;
 	line-height: 0.7em !important;
+	color: #000 !important;
+}
+
+.nuevotitt{
+	font-size: 2em  !important;
+	font-weight: 800 !important;
+	line-height: 0.7em !important;
+	color: #fff !important;
+}
+
+.nuevotitt span{
+	font-size: 2.6em  !important;
+	font-weight: 800 !important;
+	line-height: 0.7em !important;
+	color: #fff !important;
+}
+
+.  span{
+	font-size: 2.6em  !important;
+	font-weight: 800 !important;
+	line-height: 0.7em !important;
 	color: #fff !important;
 }
 
@@ -505,7 +526,7 @@ body {
 /* #Typography
 ================================================== */
 
-h1, h2 { color: #333333; font-family: 'Ubuntu', sans-serif; font-weight: normal; line-height:100%; margin-bottom:20px; margin-top:0; text-rendering: optimizelegibility; }
+h1, h2 { color: #000; font-family: 'Ubuntu', sans-serif; font-weight: normal; line-height:100%; margin-bottom:20px; margin-top:0; text-rendering: optimizelegibility; }
 h3, h4, h5, h6 { font-size: 23px !important; color: #fff; font-family: 'Ubuntu', sans-serif; font-weight: normal; line-height:100%; margin-bottom:20px; margin-top:0; text-rendering: optimizelegibility; }
 h1 { font-size:30px; }
 h2 { font-size:26px; }
@@ -686,7 +707,7 @@ img {
 
 .section-header p{
 
-	color: #fff !important;
+	color: #000 !important;
 	font-size: 22px !important;
 
 }
@@ -718,6 +739,7 @@ img {
 	background-color: #01010c !important;
 	padding: 7px !important;
 }
+
 
 
 .js .section-title,
@@ -1454,7 +1476,7 @@ js .counter-box {
 .footer{
 	padding: 30px 0;
 	text-align:center;
-	background:#3a3e4c !important;
+	background:#913242 !important;
 	position:relative;	
 }
 .toTop {
@@ -1640,8 +1662,12 @@ textarea:focus {
 
 }
 
+.fondon{
+	background-color: #1e1e1e !important;
+}
+
 .about-box p strong{
-	color: #fff !important;
+	color: #000 !important;
 }
 
 .about-box img{
@@ -1712,6 +1738,13 @@ textarea:focus {
 	font-weight: 800 !important;
 	line-height: 0.7em !important;
 	color: #fff !important;
+}
+
+.nuevotitt span{
+	font-size: 1.8em  !important;
+	font-weight: 800 !important;
+	line-height: 0.7em !important;
+	color: #000 !important;
 }
 
 
@@ -1934,5 +1967,9 @@ textarea:focus {
 
 
 .gris{
-	background-color: #282b35 !important;
+	background-color: #f0f0f0 !important;
+}
+
+.darkk{
+	color: #000 !important;
 }
